@@ -3,7 +3,8 @@ layout: post
 title: Factorization Machines with xLearn
 ---
 
-![xlearn_logo](images/xlearn_logo.png)
+<!-- ![xlearn_logo](images/xlearn_logo.png) -->
+![xlearn]({{ '/images/xlearn_logo.png' | relative_url }}) {: style="width: 400px; max-width: 100%;"} 
 
 ## Background
 
