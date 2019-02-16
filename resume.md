@@ -4,7 +4,7 @@ title: Resume
 permalink: /resume/
 ---
 
-### EXPERIENCE
+## EXPERIENCE
 ---
 **NTUC ENTERPRISE**  
 _**Data Scientist, Data Science**_  
@@ -35,7 +35,7 @@ https://www.uber.com
 
 Technologies: Python, SQL, Hive, Presto, Vertica, BigQuery, Tableau, Docker, Uber's Piper (a fork from Airbnb's Airflow), Git, Phabricator, Jenkins, and Jira, among others.
 
-### EDUCATION
+## EDUCATION
 ---
 **NANYANG TECHNOLOGICAL UNIVERSITY**  
 Bachelor of Business (Honours): Major in Banking & Finance
@@ -46,7 +46,7 @@ Overseas Exchange Program
 **CFA INSTITUTE**  
 Chartered Financial Analyst Program
 
-### HONOURS & AWARDS
+## HONOURS & AWARDS
 ---
 - Google - Won 1st Place @ Google X Carousell Challenge (2017)
 - Esplanade Theatre - Invitation to present hackathon insights to the upper management (2017)
