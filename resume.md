@@ -25,7 +25,7 @@ _**Data Analyst, CRM Lifecycle Analytics**_
 Aug 2017 - Jul 2018  
 [https://www.uber.com](https://www.uber.com)  
 - Regional data engineering and data science across performance marketing analytics, CRM lifecycle analytics, and analytics & insights
-- Clustering of active riders using K-Means Clustering and Self-Organising Maps (neural-networks)
+- Clustering of active riders using K-Means Clustering and Self-Organising Maps
 - Understanding the reasons to churn for mature riders using classification models such as Logistic Regression and Gradient Boosting Machine Classifier
 - Time series prediction for post-signup 30 days gross bookings using Gradient Boosting Machine Regressor and pre-signup features
 - Built restaurant leads optimisation model that predicts successful restaurants based on restaurant level geospatial features using XGBoost
