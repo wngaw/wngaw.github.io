@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Welcome to my tech blog! This blog is a place for me to pen down my learnings.
+Welcome to my tech blog! This is a place for me to pen down my learnings.
 
 ### Contact me
 
