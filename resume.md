@@ -9,8 +9,7 @@ permalink: /resume/
 **NTUC ENTERPRISE**  
 _**Data Scientist, Data Science**_  
 Jul 2018 - Present  
-[https://www.ntuc.org.sg](https://www.ntuc.org.sg)
-
+[https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
 - Built recommendation engines for FairPrice product classes and items, using a combination of boosted trees, deep learning, and factorization machines
 - Representation learning using Word2Vec to generate user and item embeddings for recommendations
 - Built automated dynamic email direct marketing (EDM) pipeline for cross and up-selling of FairPrice products
@@ -24,8 +23,7 @@ Technologies: AWS Elastic Compute Cloud (EC2), AWS Redshift, AWS Simple Storage 
 **UBER**  
 _**Data Analyst, CRM Lifecycle Analytics**_  
 Aug 2017 - Jul 2018  
-[https://www.uber.com](https://www.uber.com)
-
+[https://www.uber.com](https://www.uber.com)  
 - Regional data engineering and data science across performance marketing analytics, CRM lifecycle analytics, and analytics & insights
 - Clustering of active riders using K-Means Clustering and Self-Organising Maps (neural-networks)
 - Understanding the reasons to churn for mature riders using classification models such as Logistic Regression and Gradient Boosting Machine Classifier
@@ -38,8 +36,7 @@ Technologies: Python, SQL, Hive, Presto, Vertica, BigQuery, Tableau, Docker, Ube
 **GOOGLE**  
 _**Graduate Trainee, Squared Data & Analytics**_  
 Jun 2017 - Feb 2018  
-[https://www.google.com](https://www.google.com)
-
+[https://www.google.com](https://www.google.com)  
 - Won 1st Place @ Google X Carousell challenge
 - On-site training in Web Analytics, Predictive & Text Analytics, R, Python, Tableau, SQL, and Big Query, among others
 
