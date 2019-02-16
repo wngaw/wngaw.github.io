@@ -6,6 +6,8 @@ title: Field-aware Factorization Machines with xLearn
 tags: supervised-learning
 ---
 
+![xlearn]({{ '/images/xlearn_logo.png' | relative_url }})
+
 Recently, I discovered xLearn which is a high performance, scalable ML package that implements factorization machines (FM) and field-aware factorization machines (FFM). The first version of xLearn was released about 1 year ago as of writing.
 
 <!-- more -->
@@ -18,11 +20,12 @@ FFM was later introduced and further improves FM. It was then used to win the 1s
 
 To understand FM and FFM, we need to first understand a logistic regression model and a Poly2 model.
 
-![xlearn]({{ '/images/xlearn_logo.png' | relative_url }})
-
 ## Context
 
 Assume we have the following dataset where we want to predict Clicked outcome using Publisher, Advertiser, and Gender:
+
+$$\mathcal{A}$$
+
 
 ## Reference
 
