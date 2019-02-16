@@ -4,7 +4,6 @@ title:
 permalink: /resume/
 ---
 
-
 ## EXPERIENCE
 ---
 **NTUC ENTERPRISE**  
