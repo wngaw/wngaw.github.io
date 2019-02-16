@@ -19,7 +19,7 @@ avatar: https://avatars0.githubusercontent.com/u/38846140?v=4
 footer-links:
   dribbble:
   email:
-  facebook:
+  facebook: walter.ngaw
   flickr:
   github: wngaw
   instagram:
@@ -34,7 +34,7 @@ footer-links:
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
-disqus:
+disqus: https-wngaw-github-io
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
