@@ -8,7 +8,7 @@ permalink: /testimonials/
 **- Dat Le, Data Scientist, Uber**<br><br>
 
 >> "Driven by his commitment to learn as much as possible, Walter has managed to complete an internal rotation through three distinct teams in which he learned the basics of data science and analytics. The feedback from all teams he worked in has been only positive which ended up giving Walter multiple open roles to choose from. This is a true testament of his solid work on both Uber & UberEats. Thank you Walter & I look forward to welcome you to the Uber family as a full-time employee."  
-**- Thomas Wolf, Head of Marketing Technologic & Analytics, Uber**<br><br>
+**- Thomas Wolf, Head of Marketing Technology & Analytics, Uber**<br><br>
 
 >> "Walter is a dedicated analyst who goes above and beyond to ensure a project success. He worked with me on a project that required expert analysis and developed the project to a state further than what was expected or required. He was always receptive to feedbacks, while also sharing his own opinions to ensure the project was solving for the right problems.
 Walter's easy-going personality made him a great partner and I'm happy to have had the opportunity to work with him."  
