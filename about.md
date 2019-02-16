@@ -4,14 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi there! Welcome to my blog!
-
-This blog is a place where I pen down my learnings on datascience.
-
-### Frequently asked questions
-
-* Question: You studied finance, why are you here in data?
-  - Answer: In a finance firm, you typically cannot have full freedom in managing your own investments. With the skills set of investments and the interest in machine learning, the best place for me is to be in a data position outside of finance!
+Welcome to my tech blog! This blog is a place for me to pen down my learnings. Hope you find it helpful!
 
 ### Contact me
 
