@@ -3,6 +3,8 @@ layout: post
 title: Factorization Machines with xLearn
 ---
 
+![xlearn_logo](images/xlearn_logo.png)
+
 ## Background
 
 Recently, I discovered xLearn which is a high performance, scalable ML package that implements factorization machines (FM) and field-aware factorization machines (FFM). The first version of xLearn was released about 1 year ago as of writing.
