@@ -4,14 +4,12 @@ title: Resume
 permalink: /resume/
 ---
 
+
 ### EXPERIENCE
 ---
-**NTUC ENTERPRISE**
-
-_**Data Scientist, Data Science**_
-
-Jul 2018 - Present
-
+**NTUC ENTERPRISE**  
+_**Data Scientist, Data Science**_  
+Jul 2018 - Present  
 https://www.ntuc.org.sg
 
 - Built recommendation engines for FairPrice product classes and items, using a combination of boosted trees, deep learning, and factorization machines
@@ -24,12 +22,9 @@ https://www.ntuc.org.sg
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Redshift, AWS Simple Storage Service (S3), Oracle Database, LevelDB, Docker, Elasticsearch, Python, Airflow, MLflow, Django, Tableau, BitBucket, Jira, among others.
 
-**UBER**
-
-_**Data Analyst, CRM Lifecycle Analytics**_
-
-Aug 2017 - Jul 2018
-
+**UBER**  
+_**Data Analyst, CRM Lifecycle Analytics**_  
+Aug 2017 - Jul 2018  
 https://www.uber.com
 
 - Regional data engineering and data science across performance marketing analytics, CRM lifecycle analytics, and analytics & insights
@@ -43,16 +38,13 @@ Technologies: Python, SQL, Hive, Presto, Vertica, BigQuery, Tableau, Docker, Ube
 
 ### EDUCATION
 ---
-**NANYANG TECHNOLOGICAL UNIVERSITY**
-
+**NANYANG TECHNOLOGICAL UNIVERSITY**  
 Bachelor of Business (Honours): Major in Banking & Finance
 
-**ESSEC BUSINESS SCHOOL**
-
+**ESSEC BUSINESS SCHOOL**  
 Overseas Exchange Program
 
-**CFA INSTITUTE**
-
+**CFA INSTITUTE**  
 Chartered Financial Analyst Program
 
 ### HONOURS & AWARDS
