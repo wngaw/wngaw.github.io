@@ -17,7 +17,7 @@ Walter's easy-going personality made him a great partner and I'm happy to have h
 >> "Walter Ngaw interned at Fullerton Fund Management Company in 2016-1H2017. As Co-Head of Multi-Asset, I supervised and worked closely with Walter. He was involved in market research and helped to set up and refine our suite of market indicators and models. He was highly motivated, enthusiastic, knowledgeable, systematic and displayed very sound understanding of what he needed to do. Moreover, he was always prompt in meeting deadlines - in fact, he was often delivering ahead of them. I strongly commend Walter for his dedication, and recommend him highly."  
 **- Gerard Teo, Co-Head of Multi-Asset Strategies, Fullerton Fund Management**<br><br>
 
->> "Walter always showed a good business aptitude, is consistently punctual, inquisitive and always eager to learn more."
+>> "Walter always showed a good business aptitude, is consistently punctual, inquisitive and always eager to learn more."  
 **- Ron Lee, Chief Investment Officer, Wealth Management Alliance**<br><br>
 
 >> "Walter is a pleasure to work with. He is hardworking, eager to learn and has a great attitude towards work. He is also skilled at Excel and VBA, which was very helpful to me."  
