@@ -33,15 +33,11 @@ Assume we have the following dataset where we want to predict Clicked outcome us
 
 ## The Optimisation Problem
 
-The model $$\textbf{\textit{w}}$$ for logistic regression, Poly2, FM, and FFM, is obtained by solving the following optimisation problem:
+The model $$\pmb{w}$$ for logistic regression, Poly2, FM, and FFM, is obtained by solving the following optimisation problem:
 
-$$\underset{\textbf{\textit{w}}}{\min} \ \ \frac{\lambda}{2} \left\|\textbf{\textit{w}} \right\|^{2} + \sum\limits_{i=1}^m log(1 + exp(-y_{i}\phi(\textbf{\textit{w}}, \textbf{\textit{x}}_\textbf{\textit{i}}))$$
+$$\underset{\pmb{w}}{\min} \ \ \frac{\lambda}{2} \left\|\pmb{w} \right\|^{2} + \sum\limits_{i=1}^m log(1 + exp(-y_{i}\phi(\pmb{w}, \pmb{x_i}))$$
 
 where
-
-
-
-$$\mathcal{A}$$
 
 
 ## Reference
