@@ -26,7 +26,7 @@ Assume we have the following dataset where we want to predict Clicked outcome us
 
 <style>
 .tablelines table, .tablelines td, .tablelines th {
-        border: 1px solid black;
+        border: 4px solid black;
         }
 </style>
 
