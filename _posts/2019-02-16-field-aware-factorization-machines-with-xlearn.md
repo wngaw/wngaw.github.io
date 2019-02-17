@@ -65,6 +65,7 @@ $$
 &\ w_{NBC}x_{NBC} + \\
 &\ w_{MALE}x_{MALE}
 \end{align}
+$$
 
 However, logistic regression only learns the effect of each features individually rather than in a combination.
 
