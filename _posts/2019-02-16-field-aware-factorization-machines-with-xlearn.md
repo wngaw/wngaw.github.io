@@ -355,7 +355,7 @@ ffm_model = xl.create_ffm()
 ffm_model.cv(param)
 ```
 
-You should see this:x
+You should see this:
 
 ![xl_cv]({{ '/images/xl_cv.png' | relative_url }})
 <br />
