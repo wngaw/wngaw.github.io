@@ -12,7 +12,7 @@ Recently, I discovered xLearn which is a high performance, scalable ML package t
 
 <!-- more -->
 
-FM was initially introduced and popularised by Steffen Rendle after winning 4th positions in both tracks in KDD cup 2012.
+FM was initially introduced and popularised by *Steffen Rendle* after winning 4th positions in both tracks in KDD cup 2012.
 
 FM is a supervised learning algorithm that can be used for regression, classifications, and ranking. They are non-linear in nature and are trained using stochastic gradient descent (SGD).
 
@@ -23,6 +23,23 @@ To understand FM and FFM, we need to first understand a logistic regression mode
 ## Context
 
 Assume we have the following dataset where we want to predict Clicked outcome using Publisher, Advertiser, and Gender:
+
+{: class="info"}
+| Dataset| Clicked | Publisher | Advertiser | Gender |
+| --- | --- | --- | --- | --- |
+| TRAIN | YES | ESPN | NIKE | MALE |
+| TRAIN | NO | NBC | ADIDAS | MALE |
+
+
+## The Optimisation Problem
+
+The model $$\textbf{\textit{w}}$$ for logistic regression, Poly2, FM, and FFM, is obtained by solving the following optimisation problem:
+
+$$\underset{\textbf{\textit{w}}}{\min} \ \ \frac{\lambda}{2} \left\|\textbf{\textit{w}} \right\|^{2} + \sum\limits_{i=1}^m log(1 + exp(-y_{i}\phi(\textbf{\textit{w}}, \textbf{\textit{x}}_\textbf{\textit{i}}))$$
+
+where
+
+
 
 $$\mathcal{A}$$
 
