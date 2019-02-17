@@ -42,6 +42,35 @@ Jun 2017 - Feb 2018
 
 Technologies: Python, R, SQL, BigQuery, Tableau, Data Studio, Google Analytics, Google Adwords, and Google Adsense, among others.
 
+**FULLERTON FUND MANAGEMENT**  
+_**Intern, Multi-Asset Strategies**_  
+May 2016 - Mar 2017  
+[http://www.fullertonfund.com](http://www.fullertonfund.com)  
+- Macroeconomics research for Europe
+- Built quantitative investment models: alpha testing, risk parity strategy, bottom-up quantitative, top-down macro cyclical, global FX analytics, technical asset allocation
+- Backtesting of allocation strategies for the central bank of the Philippines investment proposal
+
+Technologies: R, VBA, Microsoft Excel, Bloomberg Terminal, and FactSet.
+
+**DYMON ASIA CAPITAL**  
+_**Intern, Macroeconomics Research and Strategy**_  
+Jan 2016 - Mar 2016  
+[https://www.dymonasia.com/](https://www.dymonasia.com/)  
+- Macroeconomics research across G10 countries, covering commodities, politics, central banks, and Asia bond flows
+- Built algorithmic trading models based on candlesticks reversal technical indicators across G10 currencies, equity indices, and commodities indices
+
+Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
+
+**CITIBANK**  
+_**Intern, Global Markets**_  
+Jan 2015 - Dec 2015  
+[https://www.citigroup.com](https://www.citigroup.com)  
+- Analysed investment earnings and collaterals of major hedge funds across Asia
+- Earnings reports automation for FX Prime Brokerage through the use of VBA
+- Wrote daily market commentary covering macro economics
+
+Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
+
 ## EDUCATION
 ---
 **NANYANG TECHNOLOGICAL UNIVERSITY**  
