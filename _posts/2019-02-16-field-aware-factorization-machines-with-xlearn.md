@@ -34,6 +34,7 @@ Assume we have the following dataset where we want to predict Clicked outcome us
 | :---: | :---: | :---: | :---: | :---: |
 | TRAIN | YES | ESPN | NIKE | MALE |
 | TRAIN | NO | NBC | ADIDAS | MALE |
+
 <!-- {: .tablelines} -->
 
 ## The Optimisation Problem
