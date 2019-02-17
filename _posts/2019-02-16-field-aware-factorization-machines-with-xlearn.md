@@ -69,7 +69,17 @@ $$\phi(\pmb{w}, \pmb{x}) = w_0 + \sum\limits_{i=1}^n w_i x_i + \sum\limits_{i=1}
 
 In our context,
 
-$$\phi(\pmb{w}, \pmb{x}) =  w_0 + w_{ESPN}x_{ESPN} + w_{NIKE}x_{NIKE} + w_{ADIDAS}x_{ADIDAS} + w_{NBC}x_{NBC} + w_{MALE}x_{MALE} + w_{ESPN, NIKE}x_{ESPN}x_{NIKE} + w_{ESPN, MALE}x_{ESPN}x_{MALE} + ...$$
+$$
+\begin{align}
+\phi(\pmb{w}, \pmb{x}) =  w_0 + \\ w_{ESPN}x_{ESPN} + \\
+w_{NIKE}x_{NIKE} + \\
+w_{ADIDAS}x_{ADIDAS} + \\
+w_{NBC}x_{NBC} + \\
+w_{MALE}x_{MALE} + \\
+w_{ESPN, NIKE}x_{ESPN}x_{NIKE} + w_{ESPN, MALE}x_{ESPN}x_{MALE} + \\
+...
+\end{align}
+$$
 
 ![poly2]({{ '/images/poly2.png' | relative_url }})
 *Fig. 1. Poly2 model - A dedicated weight is learned for each feature pair (linear terms ignored in diagram) (Image source: [here](http://ailab.criteo.com/ctr-prediction-linear-model-field-aware-factorization-machines/))*
@@ -83,9 +93,9 @@ FM solves this problem by learning the pairwise feature interactions in a latent
 
 For FM,
 
+$$\phi(\pmb{w}, \pmb{x}) = \textit{w}_{0} + \sum\limits_{i=1}^n w_i x_i + \sum\limits_{i=1}^n \sum\limits_{j=i + 1}^n \langle \mathbf{v}_{i} \cdot \mathbf{v}_{j} \rangle x_i x_j $$
 
-
-
+where
 
 
 
