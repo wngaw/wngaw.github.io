@@ -24,12 +24,10 @@ To understand FM and FFM, we need to first understand a logistic regression mode
 
 Assume we have the following dataset where we want to predict Clicked outcome using Publisher, Advertiser, and Gender:
 
-{: class="info"}
-| Dataset| Clicked | Publisher | Advertiser | Gender |
+| **Dataset** | **Clicked**  | **Publisher** | **Advertiser** | **Gender** |
 | --- | --- | --- | --- | --- |
 | TRAIN | YES | ESPN | NIKE | MALE |
 | TRAIN | NO | NBC | ADIDAS | MALE |
-
 
 ## The Optimisation Problem
 
