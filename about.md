@@ -32,6 +32,6 @@ If you need help in data science applications or struggling to understand person
 - Financial statement analysis
 - Macroeconomics analysis
 
-### Contact me
+### Contact Me
 
 Feel free to contact me at [w.ngaw.pk@gmail.com](mailto:w.ngaw.pk@gmail.com) for anything related to data science, investments, or start-up ideas!
