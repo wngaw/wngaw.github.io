@@ -94,6 +94,7 @@ $$
 $$
 
 ![poly2]({{ '/images/poly2.png' | relative_url }})
+<br />
 *Fig. 1. Poly2 model - A dedicated weight is learned for each feature pair (linear terms ignored in diagram) (Image source: [here](http://ailab.criteo.com/ctr-prediction-linear-model-field-aware-factorization-machines/))*
 <br />
 
@@ -144,6 +145,7 @@ $$
 $$
 
 ![fm]({{ '/images/fm.png' | relative_url }})
+<br />
 *Fig. 2. Factorization Machines - Each feature has one latent vector, which is used to interact with any other latent vectors (linear terms ignored in diagram) (Image source: [here](http://ailab.criteo.com/ctr-prediction-linear-model-field-aware-factorization-machines/))*
 <br />
 
@@ -216,6 +218,7 @@ $$
 $$
 
 ![ffm]({{ '/images/ffm.png' | relative_url }})
+<br />
 *Fig. 3. Field-aware Factorization Machines - Each feature has several latent vectors, one of them is used depending on the field of the other feature (linear terms ignored in diagram) (Image source: [here](http://ailab.criteo.com/ctr-prediction-linear-model-field-aware-factorization-machines/))*
 <br />
 
@@ -339,6 +342,7 @@ ffm_model.fit(param, 'trained_models/model.out')
 You should see this:
 
 ![xl_train]({{ '/images/xl_train.png' | relative_url }})
+<br />
 *Fig. 4.Training xLearn Model*
 <br />
 
@@ -354,6 +358,7 @@ ffm_model.cv(param)
 You should see this:x
 
 ![xl_cv]({{ '/images/xl_cv.png' | relative_url }})
+<br />
 *Fig. 5. xLearn Cross-Validation*
 <br />
 
@@ -383,7 +388,8 @@ ffm_model.fit(param, "trained_models/model.out")
 You should see this:
 
 ![xl_online_learning]({{ '/images/xl_online_learning.png' | relative_url }})
-*Fig. 5. xLearn Online Learning*
+<br />
+*Fig. 6. xLearn Online Learning*
 <br />
 
 ## Reference
