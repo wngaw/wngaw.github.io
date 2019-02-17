@@ -55,8 +55,7 @@ where
 
 In our context,
 
-$$\phi(\pmb{w}, \pmb{x}) = \\  w_0 + \\ w_{ESPN}x_{ESPN} + \\  w_{NIKE}x_{NIKE} + \\  w_{ADIDAS}x_{ADIDAS} + \\ w_{NBC}x_{NBC} 
-$$
+$$\phi(\pmb{w}, \pmb{x}) = w_0 + w_{ESPN}x_{ESPN} + w_{NIKE}x_{NIKE} + w_{ADIDAS}x_{ADIDAS} + w_{NBC}x_{NBC}$$
 
 However, logistic regression only learns the effect of each features individually rather than in a combination.
 
@@ -70,11 +69,25 @@ $$\phi(\pmb{w}, \pmb{x}) = w_0 + \sum\limits_{i=1}^n w_i x_i + \sum\limits_{i=1}
 
 In our context,
 
-$$\phi(\pmb{w}, \pmb{x}) = \\  w_0 + \\ w_{ESPN}x_{ESPN} + \\  w_{NIKE}x_{NIKE} + \\  w_{ADIDAS}x_{ADIDAS} + \\ w_{NBC}x_{NBC} + \\ w_{MALE}x_{MALE} +  \\ w_{ESPN, NIKE}x_{ESPN}x_{NIKE} + \\  w_{ESPN, MALE}x_{ESPN}x_{MALE} + ... $$
+$$\phi(\pmb{w}, \pmb{x}) =  w_0 + w_{ESPN}x_{ESPN} + w_{NIKE}x_{NIKE} + w_{ADIDAS}x_{ADIDAS} + w_{NBC}x_{NBC} + w_{MALE}x_{MALE} + w_{ESPN, NIKE}x_{ESPN}x_{NIKE} + w_{ESPN, MALE}x_{ESPN}x_{MALE} + ...$$
 
 ![poly2]({{ '/images/poly2.png' | relative_url }})
 *Fig. 1. Poly2 model - A dedicated weight is learned for each feature pair (linear terms ignored in diagram) (Image source: [here](http://ailab.criteo.com/ctr-prediction-linear-model-field-aware-factorization-machines/))*
 <br />
+
+However, a Poly2 model is computationally expensive as it requires the computation of all feature pair combinations. Also, when data is sparse, there might be some unseen pairs in the test set.
+
+## Factorization Machines
+
+FM solves this problem by learning the pairwise feature interactions in a latent space. Each feature has an associated latent vector. The interaction between two features is an inner-product of their respective latent vectors.
+
+For FM,
+
+
+
+
+
+
 
 
 
