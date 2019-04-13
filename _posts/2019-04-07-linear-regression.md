@@ -6,7 +6,7 @@ title: Linear Regression
 tags: supervised-learning
 ---
 
-As a data scientist, often you will be required to explain how a learning algorithm works. Hence, it is very important to understand the mechanics behind them.
+Linear regression is one of the most basic learning algorithms in machine learning. At the same time, it is very important because it introduces concepts such as gradient descent and cost functions which are used in most machine learning models. Hence, it is very important to understand the mechanics behaind linear regression.
 
 ## What is linear regression?
 
