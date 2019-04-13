@@ -34,7 +34,7 @@ J(\theta_0,\ \ldots,\ \theta_n) = \frac{1}{m} \sum\limits_{i=1}^m (\text{h}_\the
 \end{align}
 $$
 
-The overall objective is to minimise the cost function by iterating through different values of $$\theta$$. The lowest possible value of the cost function is also known as the global minimum. The final linear regression model will hold the valuee of $$\theta$$ that yields the lowest cost function.
+The overall objective is to minimise the cost function by iterating through different values of $$\theta$$. The lowest possible value of the cost function is also known as the global minimum. The final linear regression model will hold the values of $$\theta$$ that yields the lowest cost function.
 
 $$
 \underset{\theta_0,\ \ldots,\ \theta_n}{\min} J(\theta_0,\ \ldots,\ \theta_n)
@@ -114,7 +114,7 @@ In contrast, if $$\theta$$ is less than the optimal value of $$\theta$$, then th
 *Fig. 3. Gradient Descent - (Image source: [here](https://blog.goodaudience.com/gradient-descent-for-linear-regression-explained-7c60bc414bdd))*
 <br />
 
-However, this does not always ensure that $$\theta$$ converges. If the learning rate is too large, the updated value of $$\theta$$ might go beyond the optimal value of $$theta$$ at the global minimum.
+However, this does not always ensure that $$\theta$$ converges. If the learning rate is too large, the updated value of $$\theta$$ might go beyond the optimal value of $$\theta$$ at the global minimum.
 
 ![learning_rate]({{ '/images/gradient_descent_learning_rate.png' | relative_url }})
 <br />
@@ -123,16 +123,14 @@ However, this does not always ensure that $$\theta$$ converges. If the learning 
 
 ## Local Minimum vs Global Minimum
 
-Even when the values of $$\theta$$ converges, we need to be aware that the cost function might not be at the global minima. That is, there could be another combination of $$\theta$$ values where the value of cost function is even lower.
-
-This means the values of $$\theta$$ is stuck at a local minima.
+Even when the values of $$\theta$$ converges, we need to be aware that the cost function might not be at the global minima. That is, there could be another combination of $$\theta$$ values where the value of cost function is even lower. This means that the values of $$\theta$$ is stuck at a local minima.
 
 ![minima]({{ '/images/local_vs_global_minima.png' | relative_url }})
 <br />
 *Fig. 5. Local Vs Global Minima - (Image source: [here](https://blog.goodaudience.com/gradient-descent-for-linear-regression-explained-7c60bc414bdd))*
 <br />
 
-To counter this problem many different methods of gradient descent have been created in order to allow the algorithm to escape from the local minima to reach a better minimum. One of the popular variant of gradient descent is $$\textit{stochastic gradient descent}$$.
+To solve this problem many different methods of gradient descent have been explored and created in order to allow the algorithm to escape from the local minima to reach a better minimum. One of the popular variant of gradient descent is $$\textit{stochastic gradient descent}$$.
 
 ## Reference
 
