@@ -8,8 +8,6 @@ tags: supervised-learning
 
 As a data scientist, often you will be required to explain how a learning algorithm works. Hence, it is very important to understand the mechanics behind them.
 
-In this post, I will go into the details of linear regression.
-
 ## What is linear regression?
 
 Linear regression is a supervised learning algorithm that predicts a real-valued output based on input values. Univariate linear regression refers to a linear regression with only one variable. Multivariate linear regression refers to a linear regression with more than one variables.
@@ -28,7 +26,7 @@ $$
 
 ## Cost function
 
-A cost function measures the prediction accuracy of the hypothesis. For linear regression, a common cost function is the \textit{mean squared error}, which calculates the average squared distances between the predicted values and actual values.
+A cost function measures the prediction accuracy of the hypothesis. For linear regression, a common cost function is the $$\textit{mean squared error}$$, which calculates the average squared distances between the predicted values and actual values.
 
 $$
 \begin{align}
@@ -103,7 +101,7 @@ $$
 \theta_n := \text{temp}_n 
 $$
 
-By taking the derivitive of the cost function, we can find out which direction to move in order to reduce the cost function. The size of each step is determined by the learning rate $$\alpha$$.
+By taking the derivative of the cost function, we can find out which direction to move in order to reduce the cost function. The size of each step is determined by the learning rate $$\alpha$$.
 
 To understand this concept, suppose we have a cost function $$J(\theta_0)$$ with just one parameter to optimize.
 
