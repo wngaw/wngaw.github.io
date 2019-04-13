@@ -6,7 +6,7 @@ title: Linear Regression
 tags: supervised-learning
 ---
 
-Linear regression is one of the most basic learning algorithms in machine learning. At the same time, it is very important because it introduces concepts such as gradient descent and cost functions which are used in most machine learning models. Hence, it is very important to understand the mechanics behaind linear regression.
+Linear regression is one of the most basic learning algorithms in machine learning. At the same time, it is very important because it introduces concepts such as gradient descent and cost functions, which are used in most machine learning models. Hence, it is very important to understand the mechanics behind linear regression.
 
 ## What is linear regression?
 
