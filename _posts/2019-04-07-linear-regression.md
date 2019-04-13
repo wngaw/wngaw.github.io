@@ -68,7 +68,7 @@ $$
 
 where
 
-- values of $$j = 0, 1,\ \;dots,\ n$$
+- values of $$j = 0, 1,\ \ldots,\ n$$
 - $$\alpha$$ is the learning rate
 
 Each value of $$\theta$$ is simultaneously updated using gradient descent untill the cost function stops decreasing.
