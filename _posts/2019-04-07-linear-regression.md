@@ -75,7 +75,7 @@ Each value of $$\theta$$ is simultaneously updated using gradient descent untill
 
 To correctly implement simultaneous update, it is important to calculate all values of $$\theta$$ before updating the new values of $$\theta$$.
 
-Correct implementation of simulataneous update:
+Correct implementation of simultaneous update:
 
 $$
 \text{temp}_0 := \theta_0 - \alpha \frac{\partial}{\partial \theta_0} J(\theta_0,\ \ldots,\ \theta_n) \\
