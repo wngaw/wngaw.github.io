@@ -26,5 +26,5 @@ Here is my [time-weighted](https://www.investopedia.com/terms/t/time-weightedror
 
 ![monthly_return_distribution]({{ '/images/investments_monthly_return_distribution.png' | relative_url }})
 <br />
-*Fig. 3. Number of Months Vs Returns*
+*Fig. 3. Number of Months Vs Return*
 <br />
