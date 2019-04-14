@@ -6,7 +6,7 @@ permalink: /investments/
 
 I provide customized investments and personal finance advisory services in exchange for a small fee. Feel free to contact me if interested.
 
-Here is my investment returns in more detail:
+Here is my [time-weighted](https://www.investopedia.com/terms/t/time-weightedror.asp) investment returns in more detail:
 
 ### Cumulative Return
 
