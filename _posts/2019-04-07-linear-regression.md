@@ -24,6 +24,11 @@ $$
 \end{align}
 $$
 
+where
+
+- $$x$$ is the independent variables
+- $$\theta$$ is the optimized parameters for each independent variable
+
 ## Cost function
 
 A cost function measures the prediction accuracy of the hypothesis. For linear regression, a common cost function is the $$\textit{mean squared error}$$, which calculates the average squared distances between the predicted values and actual values.
@@ -33,6 +38,11 @@ $$
 J(\theta_0,\ \ldots,\ \theta_n) = \frac{1}{m} \sum\limits_{i=1}^m (\text{h}_\theta(x^i) - y^i )
 \end{align}
 $$
+
+where
+
+- $$n$$ is the number of independent variables
+- $$m$$ is the number of training examples
 
 The overall objective is to minimise the cost function by iterating through different values of $$\theta$$. The lowest possible value of the cost function is also known as the global minimum. The final linear regression model will hold the values of $$\theta$$ that yields the lowest cost function.
 
@@ -60,9 +70,8 @@ The gradient descent algorithm is as follows:
 
 $$
 \begin{align}
-\text{repeat until convergence}\left \{ \\
-\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0,\ \ldots,\ \theta_n) \\
-\right \}
+\text{repeat until convergence} \ \left \{
+\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0,\ \ldots,\ \theta_n) \right \}\\
 \end{align}
 $$
 
@@ -130,11 +139,11 @@ Even when the values of $$\theta$$ converges, we need to be aware that the cost 
 *Fig. 5. Local Vs Global Minima - (Image source: [here](https://blog.goodaudience.com/gradient-descent-for-linear-regression-explained-7c60bc414bdd))*
 <br />
 
-To solve this problem many different methods of gradient descent have been explored and created in order to allow the algorithm to escape from the local minima to reach a better minimum. One of the popular variant of gradient descent is $$\textit{stochastic gradient descent}$$.
+To solve this problem many different methods of gradient descent have been explored and created in order to allow the algorithm to escape from the local minima to reach a better minimum. One of the popular variants of gradient descent is $$\textit{stochastic gradient descent}$$ which I will cover in more details in the future.
 
 ## Reference
 
-[1] [Coursera: Stanford Machine Learning](https://www.coursera.org/learn/machine-learning)
+[1] Andrew Ng [Coursera: Machine Learning](https://www.coursera.org/learn/machine-learning)
 
 ---
 
