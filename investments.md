@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Invest
+title: Investments
 permalink: /investments/
 ---
 
