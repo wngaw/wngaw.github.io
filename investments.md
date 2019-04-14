@@ -11,20 +11,11 @@ Here is my investment returns in more detail:
 ### Cumulative Return
 
 ![cumulative_return]({{ '/images/investments_cumulative_return.png' | relative_url }})
-<br />
-*Fig. 1. Cumulative Return*
-<br />
 
 ### Monthly Return
 
 ![monthly_return]({{ '/images/investments_monthly_return.png' | relative_url }})
-<br />
-*Fig. 2. Monthly Return*
-<br />
 
 ### Monthly Return Distribution
 
 ![monthly_return_distribution]({{ '/images/investments_monthly_return_distribution.png' | relative_url }})
-<br />
-*Fig. 3. Monthly Return Distribution*
-<br />
