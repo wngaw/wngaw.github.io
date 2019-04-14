@@ -84,6 +84,7 @@ Chartered Financial Analyst Program
 
 ## HONOURS & AWARDS
 ---
+- NTUC Enterprise - Top Performer (2019)
 - Google - Won 1st Place @ Google X Carousell Challenge (2017)
 - Esplanade Theatre - Invitation to present hackathon insights to the upper management (2017)
 - Wealth Management Alliance - Letter of Recommendation (2016)
