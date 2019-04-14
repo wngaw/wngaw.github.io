@@ -145,7 +145,7 @@ To solve this problem many different methods of gradient descent have been explo
 
 Implementing Linear Regression is pretty straight forward and can be implemented in a few lines of codes.
 
-Begin by cloning my xLearn example repository:
+Begin by cloning my Linear Regression example repository:
 
 ```sh
 git clone https://github.com/wngaw/linear_regression_example.git
@@ -160,7 +160,7 @@ cd linear_regression_example/src
 pip install -r requirements.txt
 ```
 
-Import the relevant packages, helper function, and config file
+Import the relevant packages:
 
 ```python
 import pandas as pd

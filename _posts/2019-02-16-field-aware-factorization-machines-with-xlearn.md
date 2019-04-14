@@ -244,7 +244,7 @@ cd xlearn_example/src
 pip install -r requirements.txt
 ```
 
-Import the relevant packages, helper function, and config file
+Import the relevant packages, helper function, and config file:
 
 ```python
 import pandas as pd
