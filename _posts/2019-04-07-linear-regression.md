@@ -141,6 +141,113 @@ Even when the values of $$\theta$$ converges, we need to be aware that the cost 
 
 To solve this problem many different methods of gradient descent have been explored and created in order to allow the algorithm to escape from the local minima to reach a better minimum. One of the popular variants of gradient descent is $$\textit{stochastic gradient descent}$$ which I will cover in more details in the future.
 
+## Linear Regression with Scikit-Learn
+
+Implementing Linear Regression is pretty straight forward and can be implemented in a few lines of codes.
+
+Begin by cloning my xLearn example repository:
+
+```sh
+git clone https://github.com/wngaw/linear_regression_example.git
+```
+
+In this problem, we are trying to predict the diabetes indicator given several features of an individual.
+
+Now let’s install the relevant packages:
+
+```sh
+cd linear_regression_example/src
+pip install -r requirements.txt
+```
+
+Import the relevant packages, helper function, and config file
+
+```python
+import pandas as pd
+from sklearn import datasets, linear_model
+from sklearn.metrics import mean_squared_error, r2_score
+```
+
+Import dataset:
+
+```python
+# Load the diabetes dataset
+diabetes = datasets.load_diabetes()
+diabetes_X = diabetes.data
+diabetes_y = diabetes.target
+features = diabetes.feature_names
+
+# Convert to Dataframe
+df_X = pd.DataFrame(data=diabetes_X, columns=features)
+df_y = pd.DataFrame(data=diabetes_y, columns=['diabetes_indicator'])
+```
+
+View dataset:
+
+```python
+print(df_X.head())
+print(df_y.head())
+```
+
+You should see this:
+
+![diabetes_dataset]({{ '/images/diabetes_dataset.png' | relative_url }})
+<br />
+*Fig. 6. Diabetes Dataset*
+<br />
+
+Train test split:
+
+```python
+# Split the data into training/testing sets
+X_train = df_X[:-20]
+X_test = df_X[-20:]
+
+# Split the targets into training/testing sets
+y_train = df_y[:-20]
+y_test = df_y[-20:]
+```
+
+Initialize model and train:
+
+```python
+# Create linear regression object
+regr = linear_model.LinearRegression()
+
+# Train the model using the training sets
+regr.fit(X_train, y_train)
+```
+
+Predict for test set:
+
+```python
+# Make predictions using the testing set
+y_pred = regr.predict(X_test)
+```
+
+Evaluate model:
+
+```python
+# The coefficients
+print('Coefficients of features')
+print(features)
+print(regr.coef_)
+
+# The mean squared error
+print("Mean squared error: %.2f"
+      % mean_squared_error(y_test, y_pred))
+
+# Explained variance score: 1 is perfect prediction
+print('Variance score: %.2f' % r2_score(y_test, y_pred))
+```
+
+You should see this:
+
+![linear_regression_evaluation]({{ '/images/linear_regression_evaluation.png' | relative_url }})
+<br />
+*Fig. 7. Linear Regression Evaluation*
+<br />
+
 ## Reference
 
 [1] Andrew Ng [Coursera: Machine Learning](https://www.coursera.org/learn/machine-learning)
