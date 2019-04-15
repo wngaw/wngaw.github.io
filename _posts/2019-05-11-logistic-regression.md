@@ -66,7 +66,6 @@ $$
 
 where
 
-- $$\text{Cost}(h_\theta(x^i), y^i) = (h_\theta(x^i) - y^i)^2$$
 - $$i$$ is one of the training samples
 - $$h_\theta(x^i)$$ is the predicted value for the training sample $$i$$
 - $$y^i$$ is the actual value for the training sample $$i$$
