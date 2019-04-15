@@ -53,8 +53,8 @@ The cost function for logistic regression is derived from statistics using the [
 
 $$
 \begin{align}
-J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m \text{Cost}(h_\theta(x^i), y^i) \\
-\text{Cost}(h_\theta(x^i), y^i) =
+J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 \\
+(h_\theta(x^i) - y^i)^2 =
 \left \{
 \begin{array}{l}
 -log(h_\theta(x^i)) \ \text{if} \ y^i = 1\\
@@ -94,8 +94,8 @@ The logistic regression cost function can be further simplified into a one line 
 
 $$
 \begin{align}
-J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m \text{Cost}(h_\theta(x^i), y^i) \\
-\text{Cost}(h_\theta(x^i), y^i) = -y^i log(h_\theta(x^i)) - (1-y^i)log(1- h_\theta(x^i)
+J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 \\
+(h_\theta(x^i) - y^i)^2 = -y^i log(h_\theta(x^i)) - (1-y^i)log(1- h_\theta(x^i)
 \end{align}
 $$
 
@@ -134,7 +134,7 @@ Gradient descent is not the only algorithm that can minimize the cost function.
 - L-BFGS
 
 Advantages:
-- Do not need to pickl $$\alpha$$
+- Do not need to pick learning rate $$\alpha$$
 - Converges faster
 
 Disadvantages:
