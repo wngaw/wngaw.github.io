@@ -47,7 +47,9 @@ where
 The overall objective is to minimise the cost function by iterating through different values of $$\theta$$. The lowest possible value of the cost function is also known as the global minimum. The final linear regression model will hold the values of $$\theta$$ that yields the lowest cost function.
 
 $$
+\begin{align}
 \underset{\theta_0,\ \ldots,\ \theta_n}{\min} J(\theta_0,\ \ldots,\ \theta_n)
+\end{align}
 $$
 
 ![cost_function_2d]({{ '/images/cost_function_2d_plot_1_variable.png' | relative_url }})

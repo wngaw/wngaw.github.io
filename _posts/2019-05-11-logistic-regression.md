@@ -2,7 +2,7 @@
 layout: post
 comments: true
 date: 2019-04-07 12:00:00
-title: Linear Regression
+title: Logistic Regression
 tags: supervised-learning
 ---
 
