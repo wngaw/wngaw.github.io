@@ -6,7 +6,7 @@ title: Logistic Regression
 tags: supervised-learning
 ---
 
-Logistic regression is one of most widely used classification learning algorithms.
+Logistic regression is one of most widely used classification learning algorithms in various fields, including machine learning, most medical fields, and social sciences. Similar to the post on linear regression, I will go into the mechanics behind logistic regression in order for us to gain a deeper understanding of it.
 
 ## What is logistic regression?
 
