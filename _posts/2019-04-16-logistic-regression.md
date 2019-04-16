@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: true
-date: 2019-04-07 12:00:00
+date: 2019-04-16 12:00:00
 title: Logistic Regression
 tags: supervised-learning
 ---
