@@ -53,12 +53,12 @@ The cost function for logistic regression is derived from statistics using the [
 
 $$
 \begin{align}
-J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 \\
-(h_\theta(x^i) - y^i)^2 =
+&\ J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 \\
+&\ (h_\theta(x^i) - y^i)^2 =
 \left \{
 \begin{array}{l}
--log(h_\theta(x^i)) \ \text{if} \ y^i = 1\\
--log(1 - h_\theta(x^i)) \ \text{if} \ y^i = 0
+&\ -log(h_\theta(x^i)) \ \text{if} \ y^i = 1\\
+&\ -log(1 - h_\theta(x^i)) \ \text{if} \ y^i = 0
 \end{array}
 \right .
 \end{align}
@@ -93,8 +93,8 @@ The logistic regression cost function can be further simplified into a one line 
 
 $$
 \begin{align}
-J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 \\
-(h_\theta(x^i) - y^i)^2 = -y^i log(h_\theta(x^i)) - (1-y^i)log(1- h_\theta(x^i)
+&\ J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 \\
+&\ (h_\theta(x^i) - y^i)^2 = -y^i log(h_\theta(x^i)) - (1-y^i)log(1- h_\theta(x^i)
 \end{align}
 $$
 
@@ -128,7 +128,7 @@ Note: The gradient descent algorithm is identical to linear regression's.
 
 Gradient descent is not the only algorithm that can minimize the cost function.
 
-- Conjudate gradient
+- Conjugate gradient
 - BFGS
 - L-BFGS
 
@@ -153,6 +153,89 @@ $$
 
 where
 - $$h_\theta^i (x)$$ is the $$i^{th}$$ binary classifier
+
+## Logistic Regression with Scikit-Learn
+
+Implementing Logistic Regression is pretty straight forward and can be implemented in a few lines of codes.
+
+Begin by cloning my blog repository:
+
+```sh
+git clone https://github.com/wngaw/blog.git
+```
+
+In this problem, we are trying to predict the diabetes indicator given several features of an individual.
+
+Now let’s install the relevant packages:
+
+```sh
+cd logistic_regression_example/src
+pip install -r requirements.txt
+```
+
+Import the relevant packages:
+
+```python
+import pandas as pd
+from sklearn import datasets, linear_model
+```
+
+Import dataset:
+
+```python
+# Load the diabetes dataset
+iris = datasets.load_iris()
+iris_X = iris.data
+iris_y = iris.target
+features = iris.feature_names
+
+# Convert to Dataframe
+df_X = pd.DataFrame(data=iris_X, columns=features)
+df_y = pd.DataFrame(data=iris_y, columns=['label'])
+```
+
+View dataset:
+
+```python
+print(df_X.head())
+print(df_y.head())
+```
+
+You should see this:
+
+![diabetes_dataset]({{ '/images/iris_dataset.png' | relative_url }})
+<br />
+*Fig. 3. Iris Dataset*
+<br />
+
+Train test split:
+
+```python
+# Split the data into training/testing sets
+X_train = df_X[:-20]
+X_test = df_X[-20:]
+
+# Split the targets into training/testing sets
+y_train = df_y[:-20]
+y_test = df_y[-20:]
+```
+
+Initialize model and train:
+
+```python
+# Create logistic regression object
+regr = linear_model.LogisticRegression(solver='lbfgs', multi_class='multinomial')
+
+# Train the model using the training sets
+regr.fit(X_train, y_train)
+```
+
+Predict for test set:
+
+```python
+# Make predictions using the testing set
+y_pred = regr.predict(X_test)
+```
 
 ## Reference
 
