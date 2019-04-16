@@ -147,10 +147,10 @@ To solve this problem many different methods of gradient descent have been explo
 
 Implementing Linear Regression is pretty straight forward and can be implemented in a few lines of codes.
 
-Begin by cloning my Linear Regression example repository:
+Begin by cloning my blog repository:
 
 ```sh
-git clone https://github.com/wngaw/linear_regression_example.git
+git clone https://github.com/wngaw/blog.git
 ```
 
 In this problem, we are trying to predict the diabetes indicator given several features of an individual.

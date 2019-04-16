@@ -229,10 +229,10 @@ libFFM is open sourced, and can be found [here](https://github.com/guestwalk/lib
 
 Implementing FFM is pretty straight forward and can be implemented in a few lines of codes.
 
-Begin by cloning my xLearn example repository:
+Begin by cloning my blog repository:
 
 ```sh
-git clone https://github.com/wngaw/xlearn_example.git
+git clone https://github.com/wngaw/blog.git
 ```
 
 In this problem, we are trying to predict the loan status (approve/reject) of a mortgage loan given several features of it.
