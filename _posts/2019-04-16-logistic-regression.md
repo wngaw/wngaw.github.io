@@ -134,7 +134,7 @@ However, gradient descent is not the only algorithm that can minimize the cost f
 - BFGS
 - L-BFGS
 
-While these advanced algorithms are more complex and difficult to understand, they have the advantages of converging faster and not needing to pick learning rate, $$\alpha$$.
+While these advanced algorithms are more complex and difficult to understand, they have the advantages of converging faster and not needing to pick learning rate $$\alpha$$.
 
 ## Multiclass Classification
 
@@ -164,7 +164,7 @@ On the contrary, underfitting occurs when the algorithm tries too little to fit 
 
 Conceptually speaking, bias measures the difference between model predictions and the correct values. Variance refers to the variability of a model prediction for a given data point if you re-build the model multiple times.
 
-As seen in Figure 4, the optimal level of model complexity is where prediction error on unseen data points is minimized. Below the optimal level of model complexity bias will increase while variance will decrease due to a hypothesis that is too simplified. On the contrary, a very complex model will result in a low bias and high variance situation.
+As seen in Figure 4, the optimal level of model complexity is where prediction error on unseen data points is minimized. Below the optimal level of model complexity, bias will increase while variance will decrease due to a hypothesis that is too simplified. On the contrary, a very complex model will result in a low bias and high variance situation.
 
 ![bias_variance_tradeoff]({{ '/images/bias_variance_tradeoff.png' =50x | relative_url }})
 <br />
@@ -190,7 +190,7 @@ where
 - $$i$$ is one of the $$m^{th}$$ training samples
 - $$h_\theta(x^i)$$ is the predicted value for the training sample $$i$$
 - $$y^i$$ is the actual value for the training sample $$i$$
-- $$\lambda$$ is the regularization parameter that controls the tradeoff between fitting training dataset well and having the parameters $$\theta$$ small in values
+- $$\lambda$$ is the regularization parameter that controls the tradeoff between fitting the training dataset well and having the parameters $$\theta$$ small in values
 - $$j$$ is one of the $$n^{th}$$ parameters $$\theta$$
 
 Overall objective remains the same:
@@ -213,7 +213,7 @@ $$
 Note:
 
 - Without regularization, $$\frac{\partial}{\partial \theta_0} J(\theta_0,\ \ldots,\ \theta_n)$$ is equivalent to $$ \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)x_j^i$$. But with regularization, $$\frac{\partial}{\partial \theta_0} J(\theta_0,\ \ldots,\ \theta_n)$$ is now equivalent to $$ \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)x_j^i + \frac{\lambda}{m} \theta_j$$
-- Conceptually, $$j = 0$$ is left out of the regularization as we don't regularise the first constant term. But practically, regularizing all parameters $$\theta$$ makes little difference.
+- Conceptually, $$j = 0$$ is left out of the regularization as we don't usually regularize the first constant term. But practically, regularizing all parameters $$\theta$$ makes little difference.
 
 ## Logistic Regression with Scikit-Learn
 
