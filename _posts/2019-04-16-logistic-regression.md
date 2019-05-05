@@ -86,7 +86,7 @@ Suppose $$y^i = 0$$:
 
 These two scenarios are represented by the red line in Figure 2 below.
 
-![cost_function]({{ '/images/logistic_regression_cost_function.png' =50x | relative_url }})
+![cost_function]({{ '/images/logistic_regression_cost_function.png' | relative_url }})
 <br />
 *Fig. 2. Logistic Regression Cost Function - (Image source: [here](https://cognitree.com/blog/logistic-regression/))*
 <br />
