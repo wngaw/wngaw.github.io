@@ -67,7 +67,7 @@ Jan 2015 - Dec 2015
 [https://www.citigroup.com](https://www.citigroup.com)  
 - Analysed investment earnings and collaterals of major hedge funds across Asia
 - Earnings reports automation for FX Prime Brokerage through the use of VBA
-- Wrote daily market commentary covering macro economics
+- Wrote daily market commentary covering macroeconomics
 
 Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
 

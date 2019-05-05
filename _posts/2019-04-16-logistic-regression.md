@@ -44,12 +44,12 @@ $$
 
 where
 
-- $$\theta$$ is a vector of parameters that correponds to each independent variable
+- $$\theta$$ is a vector of parameters that corresponds to each independent variable
 - $$x$$ is a vector of independent variables
 
 ## Cost function
 
-The cost function for logistic regression is derived from statistics using the [principle of maximum likelyhood estimation](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation), which allows efficient identification of parameters. In addition the covex properrt of the cost function allow gradient descent to work effectively.
+The cost function for logistic regression is derived from statistics using the [principle of maximum likelyhood estimation](https://en.wikipedia.org/wiki/Maximum_likelihood_estimation), which allows efficient identification of parameters. In addition the covex property of the cost function allow gradient descent to work effectively.
 
 $$
 \begin{align}
@@ -66,7 +66,7 @@ $$
 
 where
 
-- $$i$$ is one of the training samples
+- $$i$$ is one of the $$m^{th}$$ training samples
 - $$h_\theta(x^i)$$ is the predicted value for the training sample $$i$$
 - $$y^i$$ is the actual value for the training sample $$i$$
 
@@ -76,12 +76,14 @@ Suppose $$y^i = 1$$:
 
 - if $$h_\theta(x^i) = 1 $$, then the prediction error = 0
 - if $$h_\theta(x^i) = 0 $$, then the prediction error approaches infinity
+
 These two scenarios are represented by the blue line in Figure 2 below.
 
 Suppose $$y^i = 0$$:
 
 - if $$h_\theta(x^i) = 0 $$, then the prediction error = 0
 - if $$h_\theta(x^i) = 1 $$, then the prediction error approaches infinity
+
 These two scenarios are represented by the red line in Figure 2 below.
 
 ![cost_function]({{ '/images/logistic_regression_cost_function.png' =50x | relative_url }})
@@ -126,18 +128,13 @@ Note: The gradient descent algorithm is identical to linear regression's.
 
 ## Advanced Optimization Algorithms
 
-Gradient descent is not the only algorithm that can minimize the cost function.
+However, gradient descent is not the only algorithm that can minimize the cost function. Other advanced optimization algorithms are:
 
 - Conjugate gradient
 - BFGS
 - L-BFGS
 
-Advantages:
-- Do not need to pick learning rate $$\alpha$$
-- Converges faster
-
-Disadvantages:
-- More complex
+While these advanced algorithms are more complex and difficult to understand, they have the advantages of converging faster and not needing to pick learning rate, $$\alpha$$.
 
 ## Multiclass Classification
 
@@ -153,6 +150,70 @@ $$
 
 where
 - $$h_\theta^i (x)$$ is the $$i^{th}$$ binary classifier
+
+## Bias-Variance Tradeoff
+
+Overfitting occurs when the algorithm tries too hard to fit the training data. This usually results in a learned hypothesis that is too complex, fails to generalize to new examples, and a cost function that is very close to zero on the training set.
+
+On the contrary, underfitting occurs when the algorithm tries too little to fit the training data. This usually results in a learned hypothesis that is not complex enough, and fails to generalize to new examples.
+
+![under_over_fitting]({{ '/images/under_over_fitting.png' =50x | relative_url }})
+<br />
+*Fig. 3. Underfitting and Overfitting - (Image source: [here](https://medium.com/mlreview/making-sense-of-the-bias-variance-trade-off-in-deep-reinforcement-learning-79cf1e83d565))*
+<br />
+
+Conceptually speaking, bias measures the difference between model predictions and the correct values. Variance refers to the variability of a model prediction for a given data point if you re-build the model multiple times.
+
+As seen in Figure 4, the optimal level of model complexity is where prediction error on unseen data points is minimized. Below the optimal level of model complexity bias will increase while variance will decrease due to a hypothesis that is too simplified. On the contrary, a very complex model will result in a low bias and high variance situation.
+
+![bias_variance_tradeoff]({{ '/images/bias_variance_tradeoff.png' =50x | relative_url }})
+<br />
+*Fig. 4. Bias-Variance Tradeoff - (Image source: [here](http://scott.fortmann-roe.com/docs/BiasVariance.html))*
+<br />
+
+## Regularization
+
+For a model to generalize well, regularization is usually introduced to reduce overfitting of the training data.
+
+This is represented by a regularization term, $$ \lambda \sum\limits_{j=1}^n \theta_j^2 $$, that is added to the cost function that penalizes all parameters $$\theta_1 \ldots,\ \theta_n$$ that are high in value. This leads to a simpler hypothesis that is less prone to overfitting.
+
+The new cost function then becomes:
+
+$$
+\begin{align}
+&\ J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 + \lambda \sum\limits_{j=1}^n \theta_j^2
+\end{align}
+$$
+
+where
+
+- $$i$$ is one of the $$m^{th}$$ training samples
+- $$h_\theta(x^i)$$ is the predicted value for the training sample $$i$$
+- $$y^i$$ is the actual value for the training sample $$i$$
+- $$\lambda$$ is the regularization parameter that controls the tradeoff between fitting training dataset well and having the parameters $$\theta$$ small in values
+- $$j$$ is one of the $$n^{th}$$ parameters $$\theta$$
+
+Overall objective remains the same:
+
+$$
+\begin{align}
+\underset{\theta_0,\ \ldots,\ \theta_n}{\min} J(\theta_0,\ \ldots,\ \theta_n)
+\end{align}
+$$
+
+Gradient descent remains the same as well:
+
+$$
+\begin{align}
+\text{repeat until convergence} \ \left \{
+\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0,\ \ldots,\ \theta_n) \right \}\\
+\end{align}
+$$
+
+Note:
+
+- Without regularization, $$\frac{\partial}{\partial \theta_0} J(\theta_0,\ \ldots,\ \theta_n)$$ is equivalent to $$ \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)x_j^i$$. But with regularization, $$\frac{\partial}{\partial \theta_0} J(\theta_0,\ \ldots,\ \theta_n)$$ is now equivalent to $$ \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)x_j^i + \frac{\lambda}{m} \theta_j$$
+- Conceptually, $$j = 0$$ is left out of the regularization as we don't regularise the first constant term. But practically, regularizing all parameters $$\theta$$ makes little difference.
 
 ## Logistic Regression with Scikit-Learn
 
