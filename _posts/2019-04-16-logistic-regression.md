@@ -181,7 +181,7 @@ The new cost function then becomes:
 
 $$
 \begin{align}
-&\ J(\theta) =  \frac{1}{m} \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 + \lambda \sum\limits_{j=1}^n \theta_j^2
+&\ J(\theta) =  \frac{1}{m} \Biggl[ \sum\limits_{i=1}^m (h_\theta(x^i) - y^i)^2 + \lambda \sum\limits_{j=1}^n \theta_j^2 \Biggl]
 \end{align}
 $$
 
@@ -301,6 +301,8 @@ y_pred = regr.predict(X_test)
 ## Reference
 
 [1] Andrew Ng [Coursera: Machine Learning](https://www.coursera.org/learn/machine-learning)
+
+[2] Scott Fortmann-Roe ["Understanding the Bias-Variance Tradeoff"](http://scott.fortmann-roe.com/docs/BiasVariance.html)
 
 ---
 
