@@ -8,7 +8,7 @@ tags: supervised-learning
 
 The field of artificial intelligence (AI) was founded in 1956. For the next 56 years till 2012, artificial intelligence was not widely adopted due to reasons such as lack of computing power, fundings, among others. In 2012, the one and only AI breakthrough happened and many AI applications started to build on top of this discovery.
 
-$$So what happened?
+So what happened?
 
 In 2012, two parallel ideas coincides during an AI competition called *[ImageNet](http://image-net.org/)*, which is an object detection challenge that consists of 150,000 images across 1,000 object categories. This repository was collected by Princeton professor *[Fei-Fei Li](https://en.wikipedia.org/wiki/Fei-Fei_Li)* across several year, who believes that showing learning algorithm more data was more important that creating the perfect learning algorithm. At the same time, a team from the University of Toronto uses Li's massive amount of data to learn a neural network, which was an idea that took inspiration from how the brain learns.
 
