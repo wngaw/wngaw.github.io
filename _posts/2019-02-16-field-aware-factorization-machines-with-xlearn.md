@@ -399,8 +399,7 @@ You should see this:
 
 [2] Yuchin Juan et al. ["Field-aware Factorization Machines for CTR Prediction"](https://www.csie.ntu.edu.tw/~cjlin/papers/ffm.pdf) ACM Conference on Recommender Systems. 2016.
 
-[3] Yuchin Juan et al. ["Field-aware Factorization Machines
-in a Real-world Online Advertising System"](https://arxiv.org/pdf/1701.04099.pdf) International Conference on World Wide Web Companion. 2017.
+[3] Yuchin Juan et al. ["Field-aware Factorization Machines in a Real-world Online Advertising System"](https://arxiv.org/pdf/1701.04099.pdf) International Conference on World Wide Web Companion. 2017.
 
 [4] Yuchin Juan ["CTR Prediction: From Linear Models to Field-aware Factorization Machines"](http://ailab.criteo.com/ctr-prediction-linear-model-field-aware-factorization-machines/)
 
