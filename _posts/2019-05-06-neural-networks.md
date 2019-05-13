@@ -8,7 +8,7 @@ tags: supervised-learning
 
 The field of artificial intelligence (AI) was founded in 1956. For the next 56 years till 2012, artificial intelligence was not widely adopted due to reasons such as lack of computing power, fundings, among others. In 2012, the one and only AI breakthrough happened and many AI applications started to build on top of this discovery.
 
-So what happened?
+$$So what happened?
 
 In 2012, two parallel ideas coincides during an AI competition called *[ImageNet](http://image-net.org/)*, which is an object detection challenge that consists of 150,000 images across 1,000 object categories. This repository was collected by Princeton professor *[Fei-Fei Li](https://en.wikipedia.org/wiki/Fei-Fei_Li)* across several year, who believes that showing learning algorithm more data was more important that creating the perfect learning algorithm. At the same time, a team from the University of Toronto uses Li's massive amount of data to learn a neural network, which was an idea that took inspiration from how the brain learns.
 
@@ -153,7 +153,7 @@ where
 
 ## Back Propagation
 
-After obtaining the prediction values through forward propagation, we then calculate the error term of the output layer and backpropagate this error terms backwards untill the second layer of the neural network. Backpropagation simply means the calculation of errors for each node in each of the previous layers.
+After obtaining the prediction values through forward propagation, we then calculate the error terms of the output layer and backpropagate this error terms backwards untill the second layer of the neural network. Backpropagation simply means the calculation of errors for each node in each of the previous layers.
 
 ![forward_propagation]({{ '/images/back_propagation.png' | relative_url }})
 <br />
@@ -182,7 +182,7 @@ where
 - $$g(x)$$ is an activation function
 - $$Z^{L-1}$$ is a vector consisting the weighted sum of inputs for each node in layer $$L-1$$
 
-Once the error terms have been computed, we can then compute the gradients using the following derived formula:
+Once the error terms have been computed, we can then compute the gradients using the following derived formula (assuming the regularisation parameter $$\lambda$$ = 0):
 
 $$
 \begin{align}
