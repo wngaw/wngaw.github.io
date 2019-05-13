@@ -6,7 +6,13 @@ title: Neural Networks
 tags: supervised-learning
 ---
 
-Input introduction paragraph.
+The field of artificial intelligence (AI) was founded in 1956. For the next 56 years till 2012, artificial intelligence was not widely adopted due to reasons such as lack of computing power, fundings, among others. In 2012, the one and only AI breakthrough happened and many AI applications started to build on top of this discovery.
+
+So what happened?
+
+In 2012, two parallel ideas coincides during an AI competition called *[ImageNet](http://image-net.org/)*, which is an object detection challenge that consists of 150,000 images across 1,000 object categories. This repository was collected by Princeton professor Fei-Fei Li across several year who believes that showing learning algorithm more data was more important that creating the perfect learning algorithm. At the same time, a team from the University of Toronto uses Li's massive amount of data to learn a neural network, which was an idea that took inspiration from how the brain learns.
+
+The Toronto team entered the ImageNet challenge with their trained neural network and became the first team to break 75% accuracy in the competition. Neural network was then used year after year by every subsequent winning teams. From then on, numerous applications that requires some form of abstract learning and predictions were built on top of that discovery.
 
 ## What is Neural Network?
 
@@ -105,7 +111,7 @@ where
 
 Note: The notation for the parameters is changed slightly in order to identify the parameters' position within the neural network.
 
-However, in order to calculate the partial derivative term $$\frac{\partial}{\partial \Theta_{ab}^{l}} J(\Theta)$$, we first need to compute the cost function $$J(\Theta)$$ using forward propagation, then back propagate the error terms for each node within the hidden layers, in order to finally compute the gradients required for the parameters update within gradient descent.
+However, in order to calculate the partial derivative term $$\frac{\partial}{\partial \Theta_{ab}^{l}} J(\Theta)$$, we first need to compute the cost function $$J(\Theta)$$ using forward propagation, then backpropagate the error terms for each node within the hidden layers, in order to finally compute the gradients required for the parameters update within gradient descent.
 
 ## Forward Propagation
 
@@ -188,11 +194,9 @@ where
 
 - $$a$$ is one of the nodes in layer $$l$$
 - $$b$$ is one of the nodes in layer $$l+1$$
-- $$\Theta_{ab}^{l} is the parameter that connects node $$a$$ in layer $$l$$ and node $$b$$ in layer $$l+1$$
+- $$\Theta_{ab}^{l}$$ is the parameter that connects node $$a$$ in layer $$l$$ and node $$b$$ in layer $$l+1$$
 
-Now that we have the gradients for each parameters, we can finally update the parameter using gradient descent.
-
-```
+Now that we have the gradients for each parameters, we can finally update the parameter using gradient descent. This entire process is then repeated several times by iterating through the entire dataset again in order to update the parameters to the point where the cost function is minimised.
 
 ## Reference
 
