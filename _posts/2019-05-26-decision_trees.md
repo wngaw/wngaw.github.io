@@ -28,7 +28,7 @@ Assume we have the following dataset where we want to predict the a fruit label 
 | TRAIN | RED | 1 | GRAPE |
 | TRAIN | YELLOW | 3 | LEMON |
 
-## An intuitive explanation
+## An Intuitive Explanation
 
 The learning algorithm starts with the root node where it will receive the entire training set. Since CART is used as the learning algorithm for a classifcation problem, Gini Impurity is the metric we calculate.
 
@@ -46,7 +46,7 @@ At each iteration, Gini Impurity will be calculated for both child nodes. A weig
 
 The information gain is then calculated by taking the difference between the Gini Impurity at the root node and the weighted average Gini Impurity at the child nodes. The best question is the one with the highest information gain.
 
-For example, using the question $$\textit{Is the color green}$$, the weighted average Gini Impurity of the child nodes is 0.5 $$[(\frac{4}{5} * 0.62) + (\frac{1}{5} * 0)]$$, giving us an information gain of 0.14 $$(0.64 - 0.5)$$
+For example, using the question $$\textit{Is the color green}$$, the weighted average Gini Impurity of the child nodes is $$ \mathbf{0.5} ((\frac{4}{5} * 0.62) + (\frac{1}{5} * 0))$$, giving us an information gain of $$\mathbf{0.14} (0.64 - 0.5)$$
 
 ![is_color_green]({{ '/images/is_color_green.png' | relative_url }})
 <br />
@@ -72,103 +72,72 @@ Next, we will then repeat the process of splitting on the $$\textit{true}$$ bran
 *Fig. 1. Is Color Yellow? - (Image source: [here](https://www.youtube.com/watch?v=LDRbO9a6XPU))*
 <br />
 
-Continuing the process, we found out that the information gain is $$0$$ since there is no more question to be asked as both data points on the $$\textit{true}$$ branch have identical features of $$Color == Yellow$$ and $$diameter == 3$$. Hence, this node becomes a leaf node which predicts Apple at 50% and Lemon at 50%.
+Continuing the process, we found out that the information gain is 0 since there is no more question to be asked as both data points on the $$\textit{true}$$ branch have identical color and diameter features. Hence, this node becomes a leaf node which predicts Apple at 50% and Lemon at 50%.
 
-Since the node at the end of the true branch has turned into a leaf node, we will then go over to the false branch to continue splitting. Over here, we found out that there is also no information gain since there is only one data point. Hence, this turns into a leaf node as well. At this point, $$Is the color yellow?$$ becomes a decision node as it is where a decision has to be made.
+Since the node at the end of the $$\textit{true}$$ branch has turned into a leaf node, we will then go over to the false branch to continue splitting. Over here, we found out that there is also no information gain since there is only one data point. Hence, this turns into a leaf node as well. At this point, $$\text{Is the color yellow?}$$ becomes a decision node as it is where a decision has to be made.
 
 ![is_color_yellow_leaf_nodes]({{ '/images/is_color_yellow_leaf_nodes.png' | relative_url }})
 <br />
 *Fig. 1. Is Color Yellow? Leaf Nodes - (Image source: [here](https://www.youtube.com/watch?v=LDRbO9a6XPU))*
 <br />
 
-Now, we return to the root node to split for the false branch. Similarly, we realise that there are no further questions to be asked that can give us information gain. Hence, this turns into a leaf node as well. At this point, $$Is the diameter >= 3?$$ becomes a decision node as well.
+Now, we return to the root node to split for the false branch. Similarly, we realise that there are no further questions to be asked that can give us information gain. Hence, this turns into a leaf node as well. At this point, $$\text{Is the diameter >= 3?}$$ becomes a decision node as well, and the decision tree is fully built.
 
 ![is_diameter_more_than_equal_3]({{ '/images/is_diameter_more_than_equal_3.png' | relative_url }})
 <br />
 *Fig. 1. Is Diameter >= 3? - (Image source: [here](https://www.youtube.com/watch?v=LDRbO9a6XPU))*
 <br />
 
-And finally, the decision tree is fully built and ready to be used to predict new data points!
-
 Although the entire process seems complicated, it can actually be represented by a concise block of code as follows:
 
 ```python
 def build_tree(rows):
-    """Builds the tree.
-    Rules of recursion: 1) Believe that it works. 2) Start by checking
-    for the base case (no further information gain). 3) Prepare for
-    giant stack traces.
-    """
-
-    # Try partitioing the dataset on each of the unique attribute,
-    # calculate the information gain,
-    # and return the question that produces the highest gain.
     gain, question = find_best_split(rows)
-
-    # Base case: no further info gain
-    # Since we can ask no further questions,
-    # we'll return a leaf.
     if gain == 0:
         return Leaf(rows)
-
-    # If we reach here, we have found a useful feature / value
-    # to partition on.
     true_rows, false_rows = partition(rows, question)
-
-    # Recursively build the true branch.
     true_branch = build_tree(true_rows)
-
-    # Recursively build the false branch.
     false_branch = build_tree(false_rows)
-
-    # Return a Question node.
-    # This records the best feature / value to ask at this point,
-    # as well as the branches to follow
-    # dependingo on the answer.
     return Decision_Node(question, true_branch, false_branch)
 ```
 
 ## Types of Decision Trees
 
-There are two kinds of decision trees. Namely, classification tree and regression tree. In a classification tree, the predicted class is obtained by selecting the class with the highest probability at the leaf node where if-else criteria are met. In a regression tree, the predicted value is the average response of observations falling in that leaf node.
+There are mainly two kinds of decision trees - classification tree and regression tree. In a classification tree, the predicted class is obtained by selecting the class with the highest probability at the leaf node where if-else criteria are met. In a regression tree, the predicted value is the average response of observations falling in that leaf node.
 
 ## Decision Tree Learning Algorithms
 
 Under the hood, the series of if-else statements of a decision tree can be generated using several kinds of learning algorithms:
 
 - *[CART (Classification and regression tree)](https://en.wikipedia.org/wiki/Predictive_analytics#Classification_and_regression_trees_.28CART.29)*: uses *[Gini Impurity](https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity)* for classification and *[Variance](https://en.wikipedia.org/wiki/Decision_tree_learning#Variance_reduction)* for regression as metrics to decide split points
-- *[C4.5](https://en.wikipedia.org/wiki/C4.5_algorithm)*: uses information gain to decide split points.
+- *[C4.5](https://en.wikipedia.org/wiki/C4.5_algorithm)*: uses information gain to decide split points
 - Others such as ID3 and C5.0
 
 ## Metrics
 
-For decision trees, different algorithms use different metrics to decide on the best split points. To complicate that further, within each algorithm, classification and regression use different metrics as well.
+For decision trees, different algorithms use different metrics to decide on the best split points. Within each algorithm, classification and regression use different metrics as well. For classification, Entropy and Gini Impurity are common metrics to evaluate at each split points when generating a decision tree. For regression, Variance is usually evaluated at each split point when generating a decision tree.
 
-For classification, Entropy and Gini Impurity are common metrics to evaluate at each split points when generating a decision tree.
+#### Entropy - For Classification
 
-For regression, Variance is usually evaluated at each split point when generating a decision tree.
+This metric measures the amount of disorder in a data set with a lowest value of 0, where a lower value is better as it indicates less uncertainty at a node. In laymen terms, it is how surprising a randomly selected item from the set is. If the entire data set were As, you will never be surprised to see an A, so entropy is 0.
 
-### Entropy
-
-This metric measures the amount of disorder in a data set, with a lowest value of 0. In laymen terms, it is how surprising a randomly selected item from the set is. If the entire data set were As, you will never be surprised to see an A, so entropy is 0.
-
-The formula for Entropy is as follows:
+The formula is as follows:
 
 $$H(X) = \sum\limits_{i=1}^n p(x_i)log_2(\frac{1}{p(x_i)} )$$
 
-### Gini Impurity
+#### Gini Impurity - For Classification
 
 This metric ranges between 0 and 1, where a lower value is better as it indicates less uncertainty at a node. It represents the probability of being incorrect if you randomly pick an item and guess its label.
 
-The formula for Gini Impurity is as follows:
+The formula is as follows:
 
 $$I_G(i) = 1 - \sum\limits_{j=1}^m f(i,j)^2$$
 
-### Variance
+#### Variance - For Regression
 
-This metric measures how much a list of numbers varies from the average value. It is calculated by averaging the squared difference of every number from the mean.
+This metric measures how much a list of numbers varies from the average value, where a lower value is better as it indicates less uncertainty at a node. It is calculated by averaging the squared difference of every number from the mean.
 
-The formula for Variance is as follows:
+The formula is as follows:
 
 $$\sigma^2 = \frac{1}{N} \sum\limits_{i=1}^N (x_i - \bar{x})^2$$
 
@@ -177,6 +146,7 @@ $$\sigma^2 = \frac{1}{N} \sum\limits_{i=1}^N (x_i - \bar{x})^2$$
 [1] Josh Gordon [Machine Learning Recipes #8](https://www.youtube.com/watch?v=LDRbO9a6XPU)
 
 [2] Toby Segaram [Programming Collective Intelligence](http://shop.oreilly.com/product/9780596529321.do)
+
 ---
 
 Thank you for reading! See you in the next post!
