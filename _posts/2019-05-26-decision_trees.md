@@ -10,7 +10,7 @@ Decision tree is one of the most interpretable machine learning model. However, 
 
 ## What is Decision Tree?
 
-Decision tree is a supervised learning algorithm that is capable of learning non-linear hypothesis through series of if-else statements. Compared to regressions and neural networks, decision tree is a much simpler learning algorithm. Decision tree can be used for both regression and classification problems.
+Decision tree is a supervised learning algorithm that is capable of learning non-linear hypothesis through series of if-else statements. Compared to linear regressions and neural networks, decision tree is a much simpler learning algorithm. Decision tree can be used for both regression and classification problems.
 
 ## Hypothesis
 
