@@ -46,7 +46,7 @@ At each iteration, Gini Impurity will be calculated for both child nodes. A weig
 
 The information gain is then calculated by taking the difference between the Gini Impurity at the root node and the weighted average Gini Impurity at the child nodes. The best question is the one with the highest information gain.
 
-For example, using the question $$\textit{Is the color green}$$, the weighted average Gini Impurity of the child nodes is $$ \mathbf{0.5} ((\frac{4}{5} * 0.62) + (\frac{1}{5} * 0))$$, giving us an information gain of $$\mathbf{0.14} (0.64 - 0.5)$$
+For example, using the question $$\textit{Is the color green}$$, the weighted average Gini Impurity of the child nodes is $$ \mathbf{0.5}$$ $$((\frac{4}{5} * 0.62) + (\frac{1}{5} * 0))$$, giving us an information gain of $$\mathbf{0.14}$$ $$(0.64 - 0.5)$$.
 
 ![is_color_green]({{ '/images/is_color_green.png' | relative_url }})
 <br />
@@ -109,9 +109,10 @@ There are mainly two kinds of decision trees - classification tree and regressio
 
 Under the hood, the series of if-else statements of a decision tree can be generated using several kinds of learning algorithms:
 
-- *[CART (Classification and regression tree)](https://en.wikipedia.org/wiki/Predictive_analytics#Classification_and_regression_trees_.28CART.29)*: uses *[Gini Impurity](https://en.wikipedia.org/wiki/Decision_tree_learning#Gini_impurity)* for classification and *[Variance](https://en.wikipedia.org/wiki/Decision_tree_learning#Variance_reduction)* for regression as metrics to decide split points
-- *[C4.5](https://en.wikipedia.org/wiki/C4.5_algorithm)*: uses information gain to decide split points
-- Others such as ID3 and C5.0
+- *[CART (Classification and regression tree)](https://en.wikipedia.org/wiki/Predictive_analytics#Classification_and_regression_trees_.28CART.29)*
+- *[Iterative Dichotomiser 3](https://en.wikipedia.org/wiki/ID3_algorithm)*
+- *[C4.5](https://en.wikipedia.org/wiki/C4.5_algorithm)*
+- *[C5.0](https://en.wikipedia.org/wiki/C4.5_algorithm#Improvements_in_C5.0/See5_algorithm)*
 
 ## Metrics
 
