@@ -116,7 +116,7 @@ Under the hood, the series of if-else statements of a decision tree can be gener
 
 ## Metrics
 
-For decision trees, different algorithms use different metrics to decide on the best split points. Within each algorithm, classification and regression use different metrics as well. For classification, entropy and gini impurity are common metrics to evaluate at each split points when generating a decision tree. For regression, variance is usually evaluated at each split point when generating a decision tree.
+For decision trees, different algorithms use different metrics to decide on the best split points. Within each algorithm, classification and regression use different metrics as well. For classification, entropy and gini impurity are common metrics to evaluate at each split points when generating a decision tree. On the other hand, for regression, variance is usually used instead.
 
 #### Entropy - For Classification
 
