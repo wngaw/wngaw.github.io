@@ -10,7 +10,7 @@ Decision tree is one of the most interpretable machine learning model. However, 
 
 ## What is Decision Tree?
 
-Decision Tree is a supervised learning algorithm that is capable of learning non-linear hypothesis through series of if-else statements. Compared to regressions and neural networks, decision tree is a much simpler learning algorithm. Decision tree can be used for both regression and classification problems.
+Decision tree is a supervised learning algorithm that is capable of learning non-linear hypothesis through series of if-else statements. Compared to regressions and neural networks, decision tree is a much simpler learning algorithm. Decision tree can be used for both regression and classification problems.
 
 ## Hypothesis
 
@@ -30,9 +30,9 @@ Assume we have the following dataset where we want to predict the a fruit label 
 
 ## An Intuitive Explanation
 
-The learning algorithm starts with the root node where it will receive the entire training set. Since CART is used as the learning algorithm for a classifcation problem, Gini Impurity is the metric we calculate.
+The learning algorithm starts with the root node where it will receive the entire training set. Since CART is used as the learning algorithm for a classifcation problem, gini impurity is the metric we calculate.
 
-The algorithm will start by calculating the Gini Impurity at the root node, which turns out to be 0.64. Then it will iterate over every value to create multiple true-false question where we can partition the data.
+The algorithm will start by calculating the gini impurity at the root node, which turns out to be 0.64. Then it will iterate over every value to create multiple true-false question where we can partition the data.
 
 Possible questions are:
 
@@ -42,11 +42,11 @@ Possible questions are:
 - Is the color yellow?
 - Is the color red?
 
-At each iteration, Gini Impurity will be calculated for both child nodes. A weighted average Gini Impurity will be calculated based on the number of data points in each child nodes. This is because we care more about the Gini Impurity of a child node with more data points.
+At each iteration, gini impurity will be calculated for both child nodes. A weighted average gini impurity will be calculated based on the number of data points in each child nodes. This is because we care more about the gini impurity of a child node with more data points.
 
-The information gain is then calculated by taking the difference between the Gini Impurity at the root node and the weighted average Gini Impurity at the child nodes. The best question is the one with the highest information gain.
+The information gain is then calculated by taking the difference between the gini impurity at the root node and the weighted average gini impurity at the child nodes. The best question is the one with the highest information gain.
 
-For example, using the question $$\textit{Is the color green}$$, the weighted average Gini Impurity of the child nodes is $$ \mathbf{0.5}$$ $$((\frac{4}{5} * 0.62) + (\frac{1}{5} * 0))$$, giving us an information gain of $$\mathbf{0.14}$$ $$(0.64 - 0.5)$$.
+For example, using the question $$\textit{Is the color green}$$, the weighted average gini impurity of the child nodes is $$ \mathbf{0.5}$$ $$((\frac{4}{5} * 0.62) + (\frac{1}{5} * 0))$$, giving us an information gain of $$\mathbf{0.14}$$ $$(0.64 - 0.5)$$.
 
 ![is_color_green]({{ '/images/is_color_green.png' | relative_url }})
 <br />
@@ -116,7 +116,7 @@ Under the hood, the series of if-else statements of a decision tree can be gener
 
 ## Metrics
 
-For decision trees, different algorithms use different metrics to decide on the best split points. Within each algorithm, classification and regression use different metrics as well. For classification, Entropy and Gini Impurity are common metrics to evaluate at each split points when generating a decision tree. For regression, Variance is usually evaluated at each split point when generating a decision tree.
+For decision trees, different algorithms use different metrics to decide on the best split points. Within each algorithm, classification and regression use different metrics as well. For classification, entropy and gini impurity are common metrics to evaluate at each split points when generating a decision tree. For regression, variance is usually evaluated at each split point when generating a decision tree.
 
 #### Entropy - For Classification
 
