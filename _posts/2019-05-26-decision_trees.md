@@ -14,7 +14,7 @@ Decision Tree is a supervised learning algorithm that is capable of learning non
 
 ## Hypothesis
 
-The hypothesis of a decision tree is represented by a series of if-else statements that outputs the probability of a class for classification and a numerical number for regression.
+The hypothesis of a decision tree is represented by a series of if-else statements that outputs the probability of a class for classification and a numerical value for regression.
 
 ## Context
 
