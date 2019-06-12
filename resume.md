@@ -10,15 +10,18 @@ permalink: /resume/
 _**Data Scientist, Data Science**_  
 Jul 2018 - Present  
 [https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
-- Built recommendation engines for FairPrice product classes and items, using a combination of boosted trees, deep learning, and factorization machines
-- Representation learning using Word2Vec to generate user and item embeddings for recommendations
-- Built automated dynamic email direct marketing (EDM) pipeline for cross and up-selling of FairPrice products
-- Designed and built personalised search ranking engine for FairPrice Online
-- Introduced, built, and maintained open-source analytics tools such as Airflow and MLflow for job scheduling, tracking of model results, and model serving
-- Developed front-end web application to generate recommendation engine leads on demand
+
+- Built various propensity recommendation engines for FairPrice product classes and items, using a combination of Alternating Least Square on Spark, Field-Aware Factorization Machines, deep learning, and boosted trees
+- Built product affinity recommendation engines for FairPrice by comparing spatial distance between user and item embeddings
+- Representation learning using Word2Vec to generate user and item embeddings as features, as well as for recommendations
+- Designed and built personalised search ranking algorithm for FairPrice Online using boosted trees, optimized for normalized discounted cumulative gain (NDCG)
+- Built search ranking Java based REST API using Spring Boot, connected to MySQL, and deployed in Kubernetes
+- Built automated dynamic email direct marketing (EDM) pipeline for cross and up-selling of FairPrice products using Mailjet API
+- Introduced, built, and maintained open-source analytics tools such as Airflow for job scheduling and MLflow for tracking of model results
+- Developed front-end web application using Django to generate recommendation engine leads on demand
 - Experimentations to evaluate model and campaign performance, along with its statistical significance
 
-Technologies: AWS Elastic Compute Cloud (EC2), AWS Redshift, AWS Simple Storage Service (S3), Oracle Database, LevelDB, Docker, Elasticsearch, Python, Airflow, MLflow, Django, Tableau, BitBucket, Jira, among others.
+Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
 
 **UBER**  
 _**Data Analyst, CRM Lifecycle Analytics**_  
