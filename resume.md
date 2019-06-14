@@ -76,6 +76,9 @@ Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
 
 ## EDUCATION
 ---
+**NATIONAL UNIVERSITY OF SINGAPORE**  
+Master of Science: Statistics
+
 **NANYANG TECHNOLOGICAL UNIVERSITY**  
 Bachelor of Business (Honours): Major in Banking & Finance
 
