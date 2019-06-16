@@ -16,6 +16,7 @@ Jul 2018 - Present
 - Representation learning using Word2Vec to generate user and item embeddings as features, as well as for recommendations
 - Designed and built personalised search ranking algorithm for FairPrice Online using boosted trees, optimized for normalized discounted cumulative gain (NDCG)
 - Built search ranking Java based REST API using Spring Boot, connected to MySQL, and deployed in Kubernetes
+- Built cache service using Google's Guava Cache that reduced API response time from 50ms to 7ms
 - Built automated dynamic email direct marketing (EDM) pipeline for cross and up-selling of FairPrice products using Mailjet API
 - Introduced, built, and maintained open-source analytics tools such as Airflow for job scheduling and MLflow for tracking of model results
 - Developed front-end web application using Django to generate recommendation engine leads on demand
