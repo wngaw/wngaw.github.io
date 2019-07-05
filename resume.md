@@ -22,7 +22,7 @@ Jul 2018 - Present
 - Developed front-end web application using Django to generate recommendation engine leads on demand
 - Experimentations to evaluate model and campaign performance, along with its statistical significance
 
-Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
+Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google Big Query, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
 
 **UBER**  
 _**Data Analyst, CRM Lifecycle Analytics**_  
@@ -39,7 +39,7 @@ Technologies: Python, SQL, Hive, Presto, Vertica, BigQuery, Tableau, Docker, Ube
 
 **GOOGLE**  
 _**Graduate Trainee, Squared Data & Analytics**_  
-Jun 2017 - Feb 2018  
+Jun 2017 - Aug 2017  
 [https://www.google.com](https://www.google.com)  
 - Won 1st Place @ Google X Carousell challenge
 - On-site training in Web Analytics, Predictive & Text Analytics, R, Python, Tableau, SQL, and Big Query, among others
