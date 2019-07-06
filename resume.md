@@ -10,17 +10,16 @@ permalink: /resume/
 _**Data Scientist, Data Science**_  
 Jul 2018 - Present  
 [https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
-
 - Built various propensity recommendation engines for FairPrice product classes and items, using a combination of Alternating Least Square on Spark, Field-Aware Factorization Machines, deep learning, and boosted trees
 - Built product affinity recommendation engines for FairPrice by comparing spatial distance between user and item embeddings
-- Representation learning using Word2Vec to generate user and item embeddings as features, as well as for recommendations
+- Created user and item embeddings for recommendations using Word2Vec representation learning
 - Designed and built personalised search ranking algorithm for FairPrice Online using boosted trees, optimized for normalized discounted cumulative gain (NDCG)
-- Built search ranking Java based REST API using Spring Boot, connected to MySQL, and deployed in Kubernetes
-- Built cache service using Google's Guava Cache that reduced API response time from 50ms to 7ms
+- Taught myself Java and developed a search ranking REST API in Spring Boot that is connected to MySQL and deployed in Kubernetes
+- Implemented cache service for search ranking using Google's Guava Cache that reduced API response time from 50ms to 7ms
 - Built automated dynamic email direct marketing (EDM) pipeline for cross and up-selling of FairPrice products using Mailjet API
 - Introduced, built, and maintained open-source analytics tools such as Airflow for job scheduling and MLflow for tracking of model results
 - Developed front-end web application using Django to generate recommendation engine leads on demand
-- Experimentations to evaluate model and campaign performance, along with its statistical significance
+- Ran multiple experimentations to evaluate model and campaign performance, along with its statistical significance
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
 
