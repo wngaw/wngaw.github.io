@@ -80,7 +80,7 @@ Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
 Master of Science: Statistics
 
 **NANYANG TECHNOLOGICAL UNIVERSITY**  
-Bachelor of Business (Honours): Major in Banking & Finance
+Bachelor of Business (Honours): Majored in Banking & Finance
 
 **ESSEC BUSINESS SCHOOL**  
 Overseas Exchange Program
