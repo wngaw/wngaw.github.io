@@ -18,7 +18,7 @@ The hypothesis of a decision tree is represented by a series of if-else statemen
 
 ## Context
 
-Assume we have the following dataset where we want to predict the a fruit label given the color and diameter of it:
+Assume we have the following dataset where we want to predict a fruit label given the color and diameter of it:
 
 | **Dataset** | **Color** | **Diameter**  | **Label** |
 | :---: | :---: | :---: | :---: |
