@@ -50,7 +50,7 @@ $$
 Standard error is the measure of dispersion of sample means around the population mean. For difference in sample means, we can calculate the standarad error as follows:
 
 $$
-SE_{(\bar x_1 - \bar x_2)} = \sqrt{\frac{s_{exp}^2}{n_{exp}} + \frac{s_{ctrl}^2}{n_{ctrl}} } \\
+SE_{(exp - ctrl)} = \sqrt{\frac{s_{exp}^2}{n_{exp}} + \frac{s_{ctrl}^2}{n_{ctrl}} } \\
 = \sqrt{\frac{12^2}{100} + \frac{12^2}{100} } \\
 = 1.70 mmHg
 $$
