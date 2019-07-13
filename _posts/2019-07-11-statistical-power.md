@@ -6,7 +6,7 @@ title: Statistical Power
 tags: statistics
 ---
 
-Often, a company might have many features that it wants to roll out to its customers. However, no one really knows if a new feature is beneficial as it has never been implemented before. Hence, an experiment is usually set up to test its incremental benefit. A properly crafted experiment will allow the experimenter to understand what is the minimum sample size to collect before the experiment. During or after the experiment, the experimenter can also understand what is statistical power of the experiment and determine if he should collect more samples.
+Many time a company might have many features that it wants to roll out to its customers. However, no one really knows if a new feature is beneficial as it has never been implemented before. Hence, an experiment is usually set up to test its incremental benefit. A properly crafted experiment will allow the experimenter to understand what is the minimum sample size to collect before the experiment. During or after the experiment, the experimenter can also understand what is statistical power of the experiment and determine if he/she should collect more samples.
 
 ## Outcomes of a Hypothesis Test
 
@@ -19,11 +19,11 @@ Before we dive into statistical power, we need to recall the possible decision o
 
 ## What is Statistical Power?
 
-Statistical power is defined as the probability of correctly rejecting $$H_0$$. In other words, it is defined as 1 - Type 2 error. In most experiments, a minimum of 80% statistical power is required to consider the test statistically significant. In a hypothesis test, our goal is to keep both $$\alpha$$ and $$beta$$ low. Since $$alpha$$ and $$\beta$$ are inversely related, the only way to reduce both simultaneously is to increase the sample size.
+Statistical power is defined as the probability of correctly rejecting $$H_0$$. In other words, it is defined as (1 - Type 2 error). In most experiments, a minimum of 80% statistical power is required to consider the test statistically significant. In a hypothesis test, our goal is to keep both $$\alpha$$ and $$\beta$$ low. Since $$\alpha$$ and $$\beta$$ are inversely related, the only way to reduce both simultaneously is to increase the sample size.
 
 ## Context
 
-Suppose, we invented a new drug that can reduce blood pressure. To test the effectivelness of the drug, we set up an experiment involving two groups of 100 users. The group that receives the treatment is the experimental group, the one that does not is the control group. The users have blood pressure that is normally distributed between 140 and 180 mmHg, with a standard deviation of 12mmHg. We set the significance level $$\alpha$$ at 5%.
+Suppose, we invented a new drug that can reduce blood pressure. To test the effectivelness of the drug, we set up an experiment involving two groups of 100 users. The group that receives the treatment is the experimental group, the one that does not is the control group. The users have blood pressure that is normally distributed between 140 and 180 mmHg, with a standard deviation of 12 mmHg. We set the significance level $$\alpha$$ at 5%.
 
 $$
 s_{exp} = 12, s_{ctrl} = 12  \\
@@ -50,33 +50,41 @@ $$
 Standard error is the measure of dispersion of sample means around the population mean. For difference in sample means, we can calculate the standarad error as follows:
 
 $$
-SE = \sqrt{\frac{s_{exp}^2}{n_{exp}} + \frac{s_{ctrl}^2}{n_{ctrl}} } \\
+SE_{(\bar x_1 - \bar x_2)} = \sqrt{\frac{s_{exp}^2}{n_{exp}} + \frac{s_{ctrl}^2}{n_{ctrl}} } \\
 = \sqrt{\frac{12^2}{100} + \frac{12^2}{100} } \\
 = 1.70 mmHg
 $$
 
 ### Calculating the Margin of Error
 
-Margin of Error = $Z_{0.025} * SE$ = $$invnorm(0.975) * SE$$   $1.96 * 1.70$ = $3.332$
+$$
+\begin{align}
+&\ \text{Margin of Error}  \\
+&\ = Z_{0.025} * SE \\
+&\ = invnorm(0.975) * SE  \\
+&\ = 1.96 * 1.70 \\
+&\ = 3.332 \\
+\end{align}
+$$
 
 ## Solving for: Effect Size, Statistical Power, and Sample Size
 
-In such situation, usually we will have three moving pieces - Effect Size, Statistical Power, and Sample Size. At any point of time, only one can be solved while the other two need to be held constant.
+In such situation, we have three variables which depends on each other - Effect Size, Statistical Power, and Sample Size. At any point of time, only one can be solved while the other two need to be held constant.
 
 ### Scenario 1: Solving for Effect Size
 
-Since sample size $n$ is large (>30), the distribution of the difference of the means is approximately normal by the Central Limit Theorem.
+Since sample size $$n$$ is large (>30), the distribution of the difference of the means is approximately normal by the Central Limit Theorem.
 
 ![min_abs_effect_size]({{ '/images/min_abs_effect_size.png' | relative_url }})
 <br />
 *Fig. 2. Minimum Absolute Effect Size - (Image source: [here](https://www.coursera.org/learn/inferential-statistics-intro))*
 <br />
 
-The minimum absolute effect size to reject $$H_0$$ at 5% significance level is 3.332.
+With reference to the margin of error calculated previously, the minimum absolute effect size to reject $$H_0$$ at 5% significance level is 3.332.
 
 ### Scenario 2: Solving for Statistical Power
 
-Suppose the observed effect size is -3mmHg, that would mean that the observed distribution is to the left of the null distribution (see Figure 3).
+Suppose the observed effect size is -3 mmHg, that would mean that the observed distribution is to the left of the null distribution (see Figure 3).
 
 ![stats_power]({{ '/images/stats_power.png' | relative_url }})
 <br />
@@ -84,21 +92,23 @@ Suppose the observed effect size is -3mmHg, that would mean that the observed di
 <br />
 
 $$
-Test \ statistics: z = \frac{-3.332 - (-3)}{1.7} = -0.195
-$$
-
-$$
-Statistical \ Power = normalcdf(-E99, -0.195, 0, 1) \\
-= 0.4227
+\begin{align}
+&\ \text{To solve for statistical power,} \\
+&\ Test \ statistics: z = \frac{-3.332 - (-3)}{1.7} = -0.195 \\
+\\
+&\ Statistical \ Power \\
+&\ = normalcdf(-E99, -0.195, 0, 1) \\
+&\ = 0.4227
+\end{align}
 $$
 
 Since, statistical power is < 0.8, we consider the experiment not to be statistically significant.
 
-Note: If the observed effect size is +3mmHg instead, the observed distribution will be located at the right side of the null distribution, resulting in the same statistical power.
+Note: If the observed effect size is +3 mmHg instead, the observed distribution will be located at the right side of the null distribution, resulting in the same statistical power.
 
 ### Scenario 3: Solving for Sample Size
 
-Similarly, suppose the observed effect size is -3mmHg, with a desired statistical power of 0.8.
+Suppose the observed effect size is -3 mmHg, with a desired statistical power of 0.8.
 
 ![sample_size]({{ '/images/sample_size.png' | relative_url }})
 <br />
@@ -107,6 +117,7 @@ Similarly, suppose the observed effect size is -3mmHg, with a desired statistica
 
 $$
 \begin{align}
+&\ \text{To solve for sample size,} \\
 &\ (Z_{0.02} * SE) + (Z_{0.025} * SE) = 3 \\
 &\ (invnorm(0.8, 0, 1) * SE) + (invnorm(0.975, 0, 1) * SE) = 3 \\
 &\ (0.84 * SE) + (1.96 * SE) = 3 \\
@@ -116,11 +127,11 @@ $$
 \end{align}
 $$
 
-Hence, minimum sample size is 251, to achieve stastical power of 80% for the test assuming an effect size of -3mmHg.
+Hence, the minimum sample size is 251 users in order to achieve a stastical power of 80%, assuming an effect size of -3 mmHg.
 
 ## Statistical Power with StatsModels
 
-Solving these parameters is rather straight forward and can be implemented using StatsModels. Do note that I implemented a two-tailed z-test which assumes that sample size $n$ is large (> 30). If sample size $n$ for you is small (<= 30), you will need to implement a t-test instead. Just replace `NormalIndPower` with `TTestIndPower` in the source code.
+Solving these parameters is rather straight forward and can be implemented using StatsModels. Note that I implemented a two-tailed z-test which assumes that the sample size $$n$$ is large (> 30). If sample size $$n$$ is small (<= 30), you will need to implement a t-test instead. Just replace `NormalIndPower` with `TTestIndPower` within the source code.
 
 Begin by cloning my blog repository:
 
