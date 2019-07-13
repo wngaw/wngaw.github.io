@@ -63,7 +63,7 @@ Margin of Error = $Z_{0.025} * SE$ = $$invnorm(0.975) * SE$$   $1.96 * 1.70$ = $
 
 In such situation, usually we will have three moving pieces - Effect Size, Statistical Power, and Sample Size. At any point of time, only one can be solved while the other two need to be held constant.
 
-## Scenario 1: Solving for Effect Size
+### Scenario 1: Solving for Effect Size
 
 Since sample size $n$ is large (>30), the distribution of the difference of the means is approximately normal by the Central Limit Theorem.
 
@@ -74,7 +74,7 @@ Since sample size $n$ is large (>30), the distribution of the difference of the 
 
 The minimum absolute effect size to reject $$H_0$$ at 5% significance level is 3.332.
 
-## Scenario 2: Solving for Statistical Power
+### Scenario 2: Solving for Statistical Power
 
 Suppose the observed effect size is -3mmHg, that would mean that the observed distribution is to the left of the null distribution (see Figure 3).
 
@@ -96,7 +96,7 @@ Since, statistical power is < 0.8, we consider the experiment not to be statisti
 
 Note: If the observed effect size is +3mmHg instead, the observed distribution will be located at the right side of the null distribution, resulting in the same statistical power.
 
-## Scenario 3: Solving for Sample Size
+### Scenario 3: Solving for Sample Size
 
 Similarly, suppose the observed effect size is -3mmHg, with a desired statistical power of 0.8.
 
@@ -120,7 +120,7 @@ Hence, minimum sample size is 251, to achieve stastical power of 80% for the tes
 
 ## Statistical Power with StatsModels
 
-Solving these parameters is rather straight forward and can be implemented using StatsModels. Do note I implemented a two-tailed z-test which assumes that sample size $n$ is large (> 30). If sample size $n$ for you is small (<= 30), you will need to implement a t-test instead. Just replace `NormalIndPower` with `TTestIndPower` in the source code.
+Solving these parameters is rather straight forward and can be implemented using StatsModels. Do note that I implemented a two-tailed z-test which assumes that sample size $n$ is large (> 30). If sample size $n$ for you is small (<= 30), you will need to implement a t-test instead. Just replace `NormalIndPower` with `TTestIndPower` in the source code.
 
 Begin by cloning my blog repository:
 
@@ -134,8 +134,6 @@ Now let’s install the relevant packages:
 cd statistical_power_example/src
 pip install -r requirements.txt
 ```
-
-You can import or copy the functions and start using it.
 
 To solve for statistical power:
 
@@ -182,9 +180,7 @@ $$\text{required abs_effect_size to reject H0: 0.485}$$
 
 ## Reference
 
-[1] Josh Gordon [Machine Learning Recipes #8](https://www.youtube.com/watch?v=LDRbO9a6XPU)
-
-[2] Toby Segaram [Programming Collective Intelligence](http://shop.oreilly.com/product/9780596529321.do)
+[1] Mine Çetinkaya-Rundel [Coursera: Inferential Statistics](https://www.coursera.org/learn/inferential-statistics-intro)
 
 ---
 
