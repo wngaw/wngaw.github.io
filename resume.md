@@ -20,6 +20,7 @@ Jul 2018 - Present
 - Introduced, built, and maintained open-source analytics tools such as Airflow for job scheduling and MLflow for tracking of model results
 - Developed front-end web application using Django to generate recommendation engine leads on demand
 - Ran numerous experiments to evaluate model and campaign performance, along with its statistical significance
+- Built a statistics engine that enabled analysts to easily evaluate the statistical significance and minimum sample size of their experiments
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
 
