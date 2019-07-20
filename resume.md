@@ -10,16 +10,22 @@ permalink: /resume/
 _**Data Scientist, Data Science**_  
 Jul 2018 - Present  
 [https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
-- Built various propensity recommendation engines for FairPrice product classes and items, using a combination of Alternating Least Square on Spark, Field-Aware Factorization Machines, deep learning, and boosted trees
-- Built product affinity recommendation engines for FairPrice by comparing spatial distance between user and item embeddings
-- Created user and item embeddings for recommendations using Word2Vec representation learning
+
+Recommendation Engine:
+- Built various propensity recommendation engines for churn customers, using a combination of Alternating Least Square on Spark, Field-Aware Factorization Machines, deep learning, and boosted trees
+- Built product affinity recommendation engines for cross-selling by comparing spatial distance between user and item embeddings
+- Created user and item embeddings for various types of recommendations using Word2Vec representation learning
+- Built automated dynamic email direct marketing (EDM) pipeline for recommendations using Mailjet API
+- Ran weekly experiments to evaluate model and campaign performance, along with its statistical significance
+- Developed front-end web application using Django to generate recommendation engine leads on demand
+
+Search Ranking:
 - Designed and built personalised search ranking algorithm for FairPrice Online using boosted trees, optimized for normalized discounted cumulative gain (NDCG)
 - Taught myself Java and developed a search ranking REST API in Spring Boot that is connected to MySQL and deployed in Kubernetes
 - Implemented cache service for search ranking using Google's Guava Cache that reduced API response time from 50ms to 7ms
-- Built automated dynamic email direct marketing (EDM) pipeline for cross and up-selling of FairPrice products using Mailjet API
+
+Data Science Platform:
 - Introduced, built, and maintained open-source analytics tools such as Airflow for job scheduling and MLflow for tracking of model results
-- Developed front-end web application using Django to generate recommendation engine leads on demand
-- Ran numerous experiments to evaluate model and campaign performance, along with its statistical significance
 - Built a statistics engine that enabled analysts to easily evaluate statistical significance and minimum sample size of their experiments
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
