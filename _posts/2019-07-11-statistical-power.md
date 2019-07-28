@@ -4,6 +4,7 @@ comments: true
 date: 2019-07-11 12:00:00
 title: Statistical Power
 tags: statistics
+image: "/images/stats_power.png"
 ---
 
 Many time a company might have many features that it wants to roll out to its customers. However, no one really knows if a new feature is beneficial as it has never been implemented before. Hence, an experiment is usually set up to test its incremental benefit. A properly crafted experiment will allow the experimenter to understand what is the minimum sample size to collect before the experiment. During or after the experiment, the experimenter can also understand what is statistical power of the experiment and determine if he/she should collect more samples.
