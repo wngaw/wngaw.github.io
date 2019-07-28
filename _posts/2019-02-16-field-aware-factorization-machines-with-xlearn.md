@@ -4,6 +4,7 @@ comments: true
 date: 2019-02-16 12:00:00
 title: Field-aware Factorization Machines with xLearn
 tags: supervised-learning
+images: "/images/ffm.png"
 ---
 
 Recently, I discovered xLearn which is a high performance, scalable ML package that implements factorization machines (FM) and field-aware factorization machines (FFM). The first version of xLearn was released about 1 year ago as of writing.

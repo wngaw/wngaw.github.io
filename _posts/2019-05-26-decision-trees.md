@@ -4,6 +4,7 @@ comments: true
 date: 2019-05-26 12:00:00
 title: Decision Trees
 tags: supervised-learning
+image: "/images/is_color_yellow_leaf_nodes.png"
 ---
 
 Decision tree is one of the most interpretable machine learning model. However, it tends to overfit when learning the decision boundaries of the training data. Hence, decision trees are usually used as the base learner of ensembling methods such as Gradient Boosting and Random Forest. These ensemnbling methods have seen extreme success in the data science world. XGBoost, LightGBM, and Catboost are some of the popular gradient boosting methods that are widely used in competitions. But before getting there, we need to first understand how decision tree works as the base learner.

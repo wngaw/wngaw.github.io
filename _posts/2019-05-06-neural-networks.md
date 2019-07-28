@@ -4,6 +4,7 @@ comments: true
 date: 2019-05-06 12:00:00
 title: Neural Networks
 tags: supervised-learning
+images: "images/neural_network_mlp.png"
 ---
 
 The field of artificial intelligence (AI) was founded in 1956. For the next 56 years till 2012, artificial intelligence was not widely adopted due to reasons such as lack of computing power, fundings, among others. In 2012, the one and only AI breakthrough happened and many AI applications started to build on top of this discovery.
