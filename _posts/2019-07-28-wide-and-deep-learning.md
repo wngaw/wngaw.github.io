@@ -4,6 +4,7 @@ comments: true
 date: 2019-07-28 12:00:00
 title: Wide and Deep Learning
 tags: supervised-learning
+image: "/images/wide_and_deep_learning.png"
 ---
 
 In June 2016, Google published a paper on wide and deep learning. This neural network architecture is supposedly great for regression and classification problems with sparse inputs, such as recommendation systems or search ranking problems. Since, I am currently working on a search ranking problem, I thought it would be great to familiarise myself with this architecture and see how it works. In this post, I will first go into the intuition behind wide and deep learning. After which, I will showcase the full implementation of this technique.
@@ -94,7 +95,7 @@ The data inputs for the wide part is a sparse dataframe that looks like the foll
 *Fig. 2. Wide Data Inputs*
 <br />
 
-For the deep component, I combined the sparse genre categorical features into one single genre categorical feeature. Label encoding is applied on categorical features while min-max scaling is applied on numerical features.
+For the deep component, I combined the sparse genre categorical features into one single genre categorical feature. Label encoding is applied on categorical features while min-max scaling is applied on numerical features.
 
 ```python
 df_deep = df[['age', 'unknown', 'Action', 'Adventure', 'Animation', 'Childrens',
