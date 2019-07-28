@@ -265,7 +265,7 @@ The overall wide and deep learning network architecture will look like this:
 
 ## Compile
 
-After the model is defined, compilation is needed to define the loss function, optimizer, and evaluation metrics. Since the movie rating that we are predicting is a continuous numerical variable, mean squared error(MSE) or mean absolute error(MAE) are suitable losses and evaluation metrics to use.
+After the model is defined, compilation is needed to define the loss function, optimizer, and evaluation metrics. Since the movie rating that we are predicting is a continuous numerical variable, mean squared error (MSE) or mean absolute error (MAE) are suitable losses and evaluation metrics to use.
 
 ```python
 wide_and_deep_model.compile(loss='mse',
@@ -314,7 +314,7 @@ Tensorboard is used as a tool for me to compare evaluation metrics across differ
 
 ## Evaluate
 
-After I am satisfied with the validation error, I performed a final evaluation on the test set. Over here, I achieved a mean squared error of 1.21, or a root mean squared error(RMSE) of 1.10. This fall short of the benchmark performance for MovieLens 100k which is typically has RMSE in the range of 0.92 to 0.96. But on the bright side, it still performs better than a random prediction based on the distribution of the training set, which has RMSE of 1.51.
+After I am satisfied with the validation error, I performed a final evaluation on the test set. Over here, I achieved a mean squared error of 1.21, or a root-mean squared error (RMSE) of 1.10. This fall short of the benchmark performance for MovieLens 100k which is typically has RMSE in the range of 0.92 to 0.96. But on the bright side, it still performs better than a random prediction based on the distribution of the training set, which has RMSE of 1.51.
 
 ```python
 wide_and_deep_model.evaluate(x={'wide_inputs': wide_inputs_test,
