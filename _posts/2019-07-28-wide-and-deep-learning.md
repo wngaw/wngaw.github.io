@@ -309,7 +309,7 @@ Tensorboard is used as a tool for me to compare evaluation metrics across differ
 
 ![tensorboard_mean_squared_error]({{ '/images/tensorboard_mean_squared_error.png' | relative_url }})
 <br />
-*Fig. 6. Comparing Training and Validation Mean Squared Error across Different Iterations*
+*Fig. 6. Tensorboard: Comparing Training and Validation Mean Squared Error across different iterations*
 <br />
 
 ## Evaluate
