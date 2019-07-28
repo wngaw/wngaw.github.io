@@ -75,7 +75,7 @@ names=data_cols, encoding='latin-1')
 df = pd.merge(pd.merge(item, data), users)
 ```
 
-For the wide component, I performed cross-product feature transformation by combining $\texit{gender}$ and $\texit{occupation}$. One-hot encoding was then applied on the cross-product features. In the paper, Google mentioned that the wide part only needs a small number of cross-product feature transformations to complement the deep part, rather than a full-size wide model.
+For the wide component, I performed cross-product feature transformation by combining $$\textit{gender}$$ and $$\textit{occupation}$$. One-hot encoding was then applied on the cross-product features. In the paper, Google mentioned that the wide part only needs a small number of cross-product feature transformations to complement the deep part, rather than a full-size wide model.
 
 ```python
 df_wide = df[['gender', 'occupation']]
