@@ -23,7 +23,7 @@ The wide and deep network are then combined at the end before passing it through
 
 The following sections will focus on the implementation of wide and deep learning using Keras with TensorFlow backend. I will be using Keras' functional API as this architecture requires multiple input data sources.
 
-## Dataset
+## Data Set
 
 The data set that I will be using is MovieLens 100k. This data set is widely used as a benchmark for recommendation systems. It consists of 100,000 ratings (1 to 5) from 943 users on 1,682 movies. Metadata of the users and movies are also provided in the data set. You can download this data set on Kaggle by clicking [here](https://www.kaggle.com/prajitdatta/movielens-100k-dataset).
 
@@ -47,7 +47,7 @@ import keras
 import tensorflow as tf
 ```
 
-## Preparation of data
+## Preparation of Data
 
 After downloading the data from Kaggle, we will need to import and combine the data files into one single dataframe.
 
