@@ -31,7 +31,7 @@ Data Science Platform:
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
 
 **UBER TECHNOLOGIES**  
-_**Data Analyst, CRM Lifecycle Analytics**_  
+_**Data Analyst, Customer Lifecycle Analytics**_  
 Aug 2017 - Jul 2018  
 [https://www.uber.com](https://www.uber.com)  
 - Regional data engineering and data science across performance marketing analytics, CRM lifecycle analytics, and analytics & insights
