@@ -4,7 +4,7 @@ comments: true
 date: 2019-07-28 12:00:00
 title: Wide and Deep Learning
 tags: supervised-learning
-image: "/images/wide_and_deep_learning.png"
+image: "/images/st_default_pic.jpg"
 ---
 
 In June 2016, Google published a paper on wide and deep learning. This neural network architecture is supposedly great for regression and classification problems with sparse inputs, such as recommendation systems or search ranking problems. Since, I am currently working on a search ranking problem, I thought it would be great to familiarise myself with this architecture and see how it works. In this post, I will first go into the intuition behind wide and deep learning. After which, I will showcase the full implementation of this technique.
