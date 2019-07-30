@@ -54,23 +54,16 @@ After downloading the data from Kaggle, we will need to import and combine the d
 
 ```python
 # Column headers for the dataset
-data_cols = ['user id','movie id','rating','timestamp']
-item_cols = ['movie id','movie title','release date',
-'video release date','IMDb URL','unknown','Action',
-'Adventure','Animation','Childrens','Comedy','Crime',
-'Documentary','Drama','Fantasy','Film-Noir','Horror',
-'Musical','Mystery','Romance ','Sci-Fi','Thriller',
-'War' ,'Western']
-user_cols = ['user id','age','gender','occupation',
-'zip code']
+data_cols = ['user id', 'movie id', 'rating', 'timestamp']
+item_cols = ['movie id', 'movie title', 'release date', 'video release date', 'IMDb URL', 'unknown', 'Action',
+             'Adventure', 'Animation', 'Childrens', 'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy', 'Film-Noir',
+             'Horror', 'Musical', 'Mystery', 'Romance ', 'Sci-Fi', 'Thriller', 'War', 'Western']
+user_cols = ['user id', 'age', 'gender', 'occupation', 'zip code']
 
 # Importing the data files into dataframes
-users = pd.read_csv('data/ml-100k/u.user', sep='|',
-names=user_cols, encoding='latin-1')
-item = pd.read_csv('data/ml-100k/u.item', sep='|',
-names=item_cols, encoding='latin-1')
-data = pd.read_csv('data/ml-100k/u.data', sep='\t',
-names=data_cols, encoding='latin-1')
+users = pd.read_csv('data/ml-100k/u.user', sep='|', names=user_cols, encoding='latin-1')
+item = pd.read_csv('data/ml-100k/u.item', sep='|', names=item_cols, encoding='latin-1')
+data = pd.read_csv('data/ml-100k/u.data', sep='\t', names=data_cols, encoding='latin-1')
 
 # Create a merged dataframe
 df = pd.merge(pd.merge(item, data), users)
@@ -83,7 +76,8 @@ df_wide = df[['gender', 'occupation']]
 df_wide['gender_occupation'] = df_wide['gender'] + "_" + df_wide['occupation']
 encoder = OneHotEncoder(handle_unknown='ignore')
 encoder.fit(df_wide[['gender_occupation']])
-one_hot_encoded_df = pd.DataFrame(encoder.transform(df_wide[['gender_occupation']]).toarray(), columns=encoder.get_feature_names())
+one_hot_encoded_df = pd.DataFrame(encoder.transform(df_wide[['gender_occupation']]).toarray(),
+                                  columns=encoder.get_feature_names())
 df_wide = df_wide.join(one_hot_encoded_df)
 df_wide.drop(['gender', 'occupation', 'gender_occupation'], axis=1, inplace=True)
 ```
@@ -98,19 +92,16 @@ The data inputs for the wide part is a sparse dataframe that looks like the foll
 For the deep component, I combined the sparse genre categorical features into one single genre categorical feature. Label encoding is applied on categorical features while min-max scaling is applied on numerical features.
 
 ```python
-df_deep = df[['age', 'unknown', 'Action', 'Adventure', 'Animation', 'Childrens',
-              'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy', 'Film-Noir',
-              'Horror', 'Musical', 'Mystery', 'Romance ', 'Sci-Fi', 'Thriller', 'War',
+df_deep = df[['age', 'unknown', 'Action', 'Adventure', 'Animation', 'Childrens', 'Comedy', 'Crime', 'Documentary',
+              'Drama', 'Fantasy', 'Film-Noir', 'Horror', 'Musical', 'Mystery', 'Romance ', 'Sci-Fi', 'Thriller', 'War',
               'Western', 'gender', 'occupation']]
 # Combine sparse categorical features into one single genre feature
-df_deep['genre'] = df_deep[['unknown', 'Action', 'Adventure', 'Animation', 'Childrens',
-              'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy', 'Film-Noir',
-              'Horror', 'Musical', 'Mystery', 'Romance ', 'Sci-Fi', 'Thriller', 'War',
-              'Western']].idxmax(1)
-df_deep.drop(columns=['unknown', 'Action', 'Adventure', 'Animation', 'Childrens',
-              'Comedy', 'Crime', 'Documentary', 'Drama', 'Fantasy', 'Film-Noir',
-              'Horror', 'Musical', 'Mystery', 'Romance ', 'Sci-Fi', 'Thriller', 'War',
-              'Western'], axis=1, inplace=True)
+df_deep['genre'] = df_deep[['unknown', 'Action', 'Adventure', 'Animation', 'Childrens', 'Comedy', 'Crime', 'Documentary',
+                            'Drama', 'Fantasy', 'Film-Noir', 'Horror', 'Musical', 'Mystery', 'Romance ', 'Sci-Fi',
+                            'Thriller', 'War', 'Western']].idxmax(1)
+df_deep.drop(columns=['unknown', 'Action', 'Adventure', 'Animation', 'Childrens', 'Comedy', 'Crime', 'Documentary',
+                      'Drama', 'Fantasy', 'Film-Noir', 'Horror', 'Musical', 'Mystery', 'Romance ', 'Sci-Fi', 'Thriller',
+                      'War', 'Western'], axis=1, inplace=True)
 
 # Encode categorical features
 for feature in ['gender', 'occupation', 'genre']:
@@ -189,49 +180,35 @@ categorical_input_1 = Input(shape=(1,), name='categorical_input_1')
 emb_1 = Embedding(input_dim=max_num_categorical_values, output_dim=emb_dimension,
                   input_length=max_sequence_length, name='emb_1')(categorical_input_1)
 emb_1 = Flatten()(emb_1)
-
 categorical_input_2 = Input(shape=(1,), name='categorical_input_2')
 emb_2 = Embedding(input_dim=max_num_categorical_values, output_dim=emb_dimension,
                   input_length=max_sequence_length, name='emb_2')(categorical_input_2)
 emb_2 = Flatten()(emb_2)
-
 categorical_input_3 = Input(shape=(1,), name='categorical_input_3')
 emb_3 = Embedding(input_dim=max_num_categorical_values, output_dim=emb_dimension,
                   input_length=max_sequence_length, name='emb_3')(categorical_input_3)
 emb_3 = Flatten()(emb_3)
-
 numerical_input = Input(shape=(1,), name='numerical_input')
-
 concatenated_embeddings = concatenate([emb_1, emb_2, emb_3, numerical_input])
-
 concatenated_embeddings = Dropout(rate=0.2)(concatenated_embeddings)
 x1 = Dense(64, activation='relu')(concatenated_embeddings)
 x1 = Dropout(rate=0.2)(x1)
-
 x2 = Dense(64, activation='relu')(x1)
 x2 = Dropout(rate=0.2)(x2)
-
 x3 = Dense(64, activation='relu')(x2)
 x3 = Dropout(rate=0.2)(x3)
-
 x4 = Dense(64, activation='relu')(merge.add([x1, x3]))
 x4 = Dropout(rate=0.2)(x4)
-
 x5 = Dense(64, activation='relu')(x4)
 x5 = Dropout(rate=0.2)(x5)
-
 x6 = Dense(64, activation='relu')(x5)
 x6 = Dropout(rate=0.2)(x6)
-
 x7 = Dense(64, activation='relu')(merge.add([x4, x6]))
 x7 = Dropout(rate=0.2)(x7)
-
 x8 = Dense(64, activation='relu')(x7)
 x8 = Dropout(rate=0.2)(x8)
-
 x9 = Dense(64, activation='relu')(x8)
 x9 = Dropout(rate=0.2)(x9)
-
 deep_output = Dense(64, activation='relu')(x9)
 ```
 
@@ -269,9 +246,7 @@ The overall wide and deep learning network architecture will look like this:
 After the model is defined, compilation is needed to define the loss function, optimizer, and evaluation metrics. Since the movie rating that we are predicting is a continuous numerical variable, mean squared error (MSE) or mean absolute error (MAE) are suitable losses and evaluation metrics to use.
 
 ```python
-wide_and_deep_model.compile(loss='mse',
-                            optimizer='adam',
-                            metrics=['mse'])
+wide_and_deep_model.compile(loss='mse', optimizer='adam', metrics=['mse'])
 ```
 
 ## Train
@@ -281,7 +256,6 @@ For training, we can set callbacks to implement model checkpoints, early stoppin
 ```python
 date_time = (datetime.utcnow() + timedelta(hours=8)).strftime('[%Y-%m-%d %H-%M-%S]')
 tensorboard = TensorBoard(log_dir='./logs/tensorboard/{}'.format(date_time))
-
 early_stopping = EarlyStopping(monitor='val_loss', patience=20)
 model_checkpoint = ModelCheckpoint(filepath='./model/wide_and_deep_model.h5',
                                    monitor='val_loss',
@@ -341,6 +315,10 @@ predictions = wide_and_deep_model.predict(x={'wide_inputs': wide_inputs_test,
                                              'numerical_input': numerical_input_test},
                                           batch_size=32, verbose=1)
 ```
+
+## Source Code
+
+You can see all of the codes on my Github by clicking [here](https://github.com/wngaw/blog/blob/master/wide_and_deep_learning_example/src/wide_and_deep_learning.py)!
 
 ## Reference
 
