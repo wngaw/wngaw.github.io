@@ -32,6 +32,7 @@ Data Science Platform:
 - Built a statistics engine that enabled analysts to easily evaluate statistical significance and minimum sample size of their experiments
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
+
 <br />
 
 **UBER TECHNOLOGIES**  
@@ -46,6 +47,7 @@ Aug 2017 - Jul 2018
 - Built restaurant scorecard for 32 cities and 600 geofences in APAC that evaluates restaurants performance across economics, selection, and operations metrics
 
 Technologies: Python, SQL, Hive, Presto, Vertica, BigQuery, Tableau, Docker, Uber's Piper (a fork from Airbnb's Airflow), Git, Phabricator, Jenkins, and Jira, among others.
+
 <br />
 
 **GOOGLE**  
@@ -56,6 +58,7 @@ Jun 2017 - Aug 2017
 - On-site training in Web Analytics, Predictive & Text Analytics, R, Python, Tableau, SQL, and Big Query, among others
 
 Technologies: Python, R, SQL, BigQuery, Tableau, Data Studio, Google Analytics, Google Adwords, and Google Adsense, among others.
+
 <br />
 
 **FULLERTON FUND MANAGEMENT**  
@@ -67,6 +70,7 @@ May 2016 - Mar 2017
 - Backtesting of allocation strategies for the central bank of the Philippines investment proposal
 
 Technologies: R, VBA, Microsoft Excel, Bloomberg Terminal, and FactSet.
+
 <br />
 
 **DYMON ASIA CAPITAL**  
@@ -77,6 +81,7 @@ Jan 2016 - Mar 2016
 - Built algorithmic trading models based on candlesticks reversal technical indicators across G10 currencies, equity indices, and commodities indices
 
 Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
+
 <br />
 
 **CITIBANK**  
