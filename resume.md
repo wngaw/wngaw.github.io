@@ -24,6 +24,9 @@ Search Ranking:
 - Taught myself Java and developed a search ranking REST API in Spring Boot that is connected to MySQL and deployed in Kubernetes
 - Implemented cache service for search ranking using Google's Guava Cache that reduced API response time from 50ms to 7ms
 
+Inventory Optimization:
+- Optimized inventory by estimating cross-elasticity of demand for item pairs through multi-staged clustering using demographic features, text features, and item embeddings
+
 Data Science Platform:
 - Introduced, built, and maintained open-source analytics tools such as Airflow for job scheduling and MLflow for tracking of model results
 - Built a statistics engine that enabled analysts to easily evaluate statistical significance and minimum sample size of their experiments

@@ -303,7 +303,7 @@ wide_and_deep_model.evaluate(x={'wide_inputs': wide_inputs_test,
 
 ## Inference
 
-In reality, after training and testing, you will be expected to deploy the model into production. During this time, you wil only have the independent variables.
+In reality, after training and testing, you will be expected to deploy the model into production. During this time, you will only have the independent variables.
 
 Just as an example, you can generate your predictions as follows:
 
