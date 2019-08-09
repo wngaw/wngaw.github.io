@@ -32,7 +32,8 @@ Data Science Platform:
 - Built a statistics engine that enabled analysts to easily evaluate statistical significance and minimum sample size of their experiments
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
-\n
+
+<br />
 
 **UBER TECHNOLOGIES**  
 _**Data Analyst, Customer Lifecycle Analytics**_  
