@@ -32,7 +32,7 @@ Data Science Platform:
 - Built a statistics engine that enabled analysts to easily evaluate statistical significance and minimum sample size of their experiments
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
-
+\n
 
 **UBER TECHNOLOGIES**  
 _**Data Analyst, Customer Lifecycle Analytics**_  
@@ -47,7 +47,6 @@ Aug 2017 - Jul 2018
 
 Technologies: Python, SQL, Hive, Presto, Vertica, BigQuery, Tableau, Docker, Uber's Piper (a fork from Airbnb's Airflow), Git, Phabricator, Jenkins, and Jira, among others.
 
-
 **GOOGLE**  
 _**Graduate Trainee, Squared Data & Analytics**_  
 Jun 2017 - Aug 2017  
@@ -56,7 +55,6 @@ Jun 2017 - Aug 2017
 - On-site training in Web Analytics, Predictive & Text Analytics, R, Python, Tableau, SQL, and Big Query, among others
 
 Technologies: Python, R, SQL, BigQuery, Tableau, Data Studio, Google Analytics, Google Adwords, and Google Adsense, among others.
-
 
 **FULLERTON FUND MANAGEMENT**  
 _**Intern, Multi-Asset Strategies**_  
@@ -67,7 +65,7 @@ May 2016 - Mar 2017
 - Backtesting of allocation strategies for the central bank of the Philippines investment proposal
 
 Technologies: R, VBA, Microsoft Excel, Bloomberg Terminal, and FactSet.
-
+\n
 
 **DYMON ASIA CAPITAL**  
 _**Intern, Macroeconomics Research and Strategy**_  
@@ -77,7 +75,6 @@ Jan 2016 - Mar 2016
 - Built algorithmic trading models based on candlesticks reversal technical indicators across G10 currencies, equity indices, and commodities indices
 
 Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
-
 
 **CITIBANK**  
 _**Intern, Global Markets**_  
