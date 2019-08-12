@@ -4,7 +4,7 @@ comments: true
 date: 2019-08-10 12:00:00
 title: Auto Arima with Pyramid
 tags: time-series-modelling
-image: "/images/wide_and_deep_learning.png"
+image: "/images/arima_cover_picture.png"
 ---
 
 Time series forecasting is one of the common problems that we face everyday. Some of these include predicting equity prices, inventory levels, sales quantity, and the list goes on. In R, Auto ARIMA is one of the favourite time-series modelling techniques. However, if you are a Python user, you can implement that too using [Pyramid](http://www.alkaline-ml.com/pmdarima/0.9.0/index.html). As Auto ARIMA has many tunable parameters, it is crucial for us to understand the mechanics behind this algorithm!
