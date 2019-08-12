@@ -9,9 +9,17 @@ image: "/images/sigmoid_function.png"
 
 Logistic regression is one of most widely used classification learning algorithms in various fields, including machine learning, most medical fields, and social sciences. Similar to the post on linear regression, I will go into the mechanics behind logistic regression in order for us to gain a deeper understanding of it.
 
+
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+
 ## What is logistic regression?
 
 Logistic regression is a supervised learning algorithm that outputs values between zero and one.
+
+> ✅ **Even logistic regression is one of the simplest binary classifier, it is actually one of the most adopted!**
 
 ## Hypothesis
 

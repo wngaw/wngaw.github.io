@@ -9,7 +9,13 @@ image: "/images/wide_and_deep_learning.png"
 
 In June 2016, Google published a paper on wide and deep learning. This neural network architecture is supposedly great for regression and classification problems with sparse inputs, such as recommendation systems or search ranking problems. Since, I am currently working on a search ranking problem, I thought it would be great to familiarise myself with this architecture and see how it works. In this post, I will first go into the intuition behind wide and deep learning. After which, I will showcase the full implementation of this technique.
 
-# What is Wide and Deep Learning?
+
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+
+## What is Wide and Deep Learning?
 
 It is a supervised learning neural network architecture that combines a wide model and a deep model into one single architecture. The wide model takes in cross-product categorical features as inputs, and it is capable of memorizing the relationship between feature inputs and the dependent variable. On the other hand, the deep model takes in numerical and categorical features as inputs, pass it through multiple layers of neurons, and it is great at generalizing the relationship between feature inputs and the dependent variable.
 
@@ -20,15 +26,17 @@ The wide and deep network are then combined at the end before passing it through
 *Fig. 1. Wide and Deep Learning - (Image source: [here](https://ai.googleblog.com/2016/06/wide-deep-learning-better-together-with.html))*
 <br />
 
-# Implementation
+## Implementation
 
 The following sections will focus on the implementation of wide and deep learning using Keras with TensorFlow backend. I will be using Keras' functional API as this architecture requires multiple input data sources.
 
-## Data Set
+> ✅ **Keras Function API is suitable when you have multiple inputs and outputs in your neural network.**
+
+### Data Set
 
 The data set that I will be using is MovieLens 100k. This data set is widely used as a benchmark for recommendation systems. It consists of 100,000 ratings (1 to 5) from 943 users on 1,682 movies. Metadata of the users and movies are also provided in the data set. You can download this data set on Kaggle by clicking [here](https://www.kaggle.com/prajitdatta/movielens-100k-dataset).
 
-## Import Libraries
+### Import Libraries
 
 Let's start off by importing the necessary libraries
 
@@ -48,7 +56,7 @@ import keras
 import tensorflow as tf
 ```
 
-## Preparation of Data
+### Preparation of Data
 
 After downloading the data from Kaggle, we will need to import and combine the data files into one single dataframe.
 
@@ -164,7 +172,7 @@ y_train = y_train.values
 y_test = y_test.values
 ```
 
-## Define Model Architecture
+### Define Model Architecture
 
 This is the part where we start to define the wide and deep learning network architecture using Keras' functional API.
 
@@ -241,7 +249,7 @@ The overall wide and deep learning network architecture will look like this:
 *Fig. 4. Wide and Deep Model*
 <br />
 
-## Compile
+### Compile
 
 After the model is defined, compilation is needed to define the loss function, optimizer, and evaluation metrics. Since the movie rating that we are predicting is a continuous numerical variable, mean squared error (MSE) or mean absolute error (MAE) are suitable losses and evaluation metrics to use.
 
@@ -249,7 +257,7 @@ After the model is defined, compilation is needed to define the loss function, o
 wide_and_deep_model.compile(loss='mse', optimizer='adam', metrics=['mse'])
 ```
 
-## Train
+### Train
 
 For training, we can set callbacks to implement model checkpoints, early stopping, as well as saving logs for tensorboard. A validation split of 20% is also set in order for us to validate the model performance during training. 20% was chosen since the data set of 100k is rather small.
 
@@ -287,7 +295,7 @@ Tensorboard is used as a tool for me to compare evaluation metrics across differ
 *Fig. 6. Tensorboard: Comparing Training and Validation Mean Squared Error across different iterations*
 <br />
 
-## Evaluate
+### Evaluate
 
 After I am satisfied with the validation error, I performed a final evaluation on the test set. Over here, I achieved a mean squared error of 1.21, or a root-mean squared error (RMSE) of 1.10. This fall short of the benchmark performance for MovieLens 100k which is typically has RMSE in the range of 0.92 to 0.96. But on the bright side, it still performs better than a random prediction based on the distribution of the training set, which has RMSE of 1.51.
 
@@ -301,7 +309,7 @@ wide_and_deep_model.evaluate(x={'wide_inputs': wide_inputs_test,
                              batch_size=32, verbose=1)
 ```
 
-## Inference
+### Inference
 
 In reality, after training and testing, you will be expected to deploy the model into production. During this time, you will only have the independent variables.
 

@@ -15,9 +15,17 @@ In 2012, two parallel ideas coincides during an AI competition called *[ImageNet
 
 The Toronto team entered the ImageNet challenge with their trained neural network and became the first team to break 75% accuracy in the competition. Neural network was then used year after year by every subsequent winning teams.
 
+
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+
 ## What is Neural Network?
 
 Neural networks is a supervised learning algorithm that is capable of learning non-linear hypothesis.
+
+> ✅ **It is very important to understand the basic mechanics such as cost function, gradient descent, forward and backward propagation as all neural networks are built based on these concepts.**
 
 ## Hypothesis
 

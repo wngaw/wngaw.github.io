@@ -9,6 +9,12 @@ image: "/images/local_vs_global_minima.png"
 
 Linear regression is one of the most basic learning algorithms in machine learning. At the same time, it is very important because it introduces concepts such as gradient descent and cost functions, which are used in most machine learning models. Hence, it is very important to understand the mechanics behind linear regression.
 
+
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+
 ## What is linear regression?
 
 Linear regression is a supervised learning algorithm that predicts a real-valued output based on input values. Univariate linear regression refers to a linear regression with only one variable. Multivariate linear regression refers to a linear regression with more than one variables.

@@ -9,9 +9,17 @@ image: "/images/is_color_yellow_leaf_nodes.png"
 
 Decision tree is one of the most interpretable machine learning model. However, it tends to overfit when learning the decision boundaries of the training data. Hence, decision trees are usually used as the base learner of ensembling methods such as Gradient Boosting and Random Forest. These ensemnbling methods have seen extreme success in the data science world. XGBoost, LightGBM, and Catboost are some of the popular gradient boosting methods that are widely used in competitions. But before getting there, we need to first understand how decision tree works as the base learner.
 
+
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+
 ## What is Decision Tree?
 
 Decision tree is a supervised learning algorithm that is capable of learning non-linear hypothesis through series of if-else statements. Compared to linear regressions and neural networks, decision tree is a much simpler learning algorithm. Decision tree can be used for both regression and classification problems.
+
+> ✅ **Decision trees are used as a base learner for more complicated algorithms such as Random Forest and Gradient Boosted Machine.**
 
 ## Hypothesis
 

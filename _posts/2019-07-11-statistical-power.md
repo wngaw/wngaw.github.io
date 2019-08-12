@@ -9,6 +9,12 @@ image: "/images/stats_power.png"
 
 Many time a company might have many features that it wants to roll out to its customers. However, no one really knows if a new feature is beneficial as it has never been implemented before. Hence, an experiment is usually set up to test its incremental benefit. A properly crafted experiment will allow the experimenter to understand what is the minimum sample size to collect before the experiment. During or after the experiment, the experimenter can also understand what is statistical power of the experiment and determine if he/she should collect more samples.
 
+
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+
 ## Outcomes of a Hypothesis Test
 
 Before we dive into statistical power, we need to recall the possible decision outcomes of a hypothesis test (see Figure 1). Type 1 Error is the probablity of rejecting $$H_0$$ when $$H_0$$ is true, denoted by $$\alpha$$ (significance level). On the other hand, Type 2 Error is the probability of not rejecting $$H_0$$ when $$H_a$$ is true instead, denoted by $$\beta$$.

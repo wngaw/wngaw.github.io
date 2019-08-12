@@ -19,6 +19,14 @@ FFM was later introduced and further improves FM. It was then used to win the 1s
 
 To understand FM and FFM, we need to first understand a logistic regression model and a Poly2 model.
 
+> ✅ **Before jumping into Field-aware Factorization Machines, we need to first understand a logistic regression model, a Poly2 mode, and a Factorization Machines Model.**
+
+
+{: class="table-of-content"}
+* TOC
+{:toc}
+
+
 ## Context
 
 Assume we have the following dataset where we want to predict Clicked outcome using Publisher, Advertiser, and Gender:
