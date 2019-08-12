@@ -196,9 +196,7 @@ $$
 \end{align}
 $$
 
-where,
-
-- $$x \in \mathbb{R}$$
+where $$x\in\mathbb{R}$$
 
 ## Autoregressive Moving Average (ARMA)
 
