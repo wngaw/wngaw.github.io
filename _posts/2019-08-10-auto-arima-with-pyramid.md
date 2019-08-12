@@ -17,7 +17,7 @@ Time series forecasting is one of the common problems that we face everyday. Som
 
 ## What is Auto ARIMA?
 
-At a high level, Auto ARIMA is a form of supervised learning for time series problem. Auto ARIMA is basically ARIMA with a gridsearch component, in order to find the best parameters based on metrics such as Akaike Information Criterion (AIC). 
+At a high level, Auto ARIMA is a form of supervised learning for time series problems. Auto ARIMA is basically ARIMA with a gridsearch component, in order to find the best parameters based on metrics such as Akaike Information Criterion (AIC). 
 
 ARIMA stands for Autoregressive Integrated Moving Average. ARIMA can be further broken down into the Autoregressive (AR) part, the Moving Average (MA) part, and Integrated (I) part. AR and MA models can be used as independent models to generate time-series predictions. However, when combined together as an ARMA model, it can generate better predictions. The integrated component removes trends by using a differencing operator.
 
