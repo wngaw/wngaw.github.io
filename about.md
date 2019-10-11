@@ -36,4 +36,4 @@ If you need help in building data science applications, or struggle to understan
 
 ### Contact Me
 
-Feel free to contact me at [w.ngaw.pk@gmail.com](mailto:w.ngaw.pk@gmail.com) for anything related to data science, investments, or start-up ideas!
+Feel free to contact me on LinkedIn for anything related to data science, investments, or start-up ideas!
