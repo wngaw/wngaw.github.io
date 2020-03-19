@@ -27,7 +27,7 @@ Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS 
 
 <br />
 
-**UBER TECHNOLOGIES**  
+**UBER**  
 _**Data Analyst, Customer Lifecycle Analytics**_  
 Aug 2017 - Jul 2018  
 [https://www.uber.com](https://www.uber.com)  
@@ -54,7 +54,7 @@ Technologies: Python, R, SQL, BigQuery, Tableau, Data Studio, Google Analytics, 
 <br />
 
 **FULLERTON FUND MANAGEMENT**  
-_**Intern, Multi-Asset Strategies**_  
+_**Analyst, Multi-Asset Strategies**_  
 May 2016 - Mar 2017  
 [http://www.fullertonfund.com](http://www.fullertonfund.com)  
 - Macroeconomics research for Europe
@@ -66,7 +66,7 @@ Technologies: R, VBA, Microsoft Excel, Bloomberg Terminal, and FactSet.
 <br />
 
 **DYMON ASIA CAPITAL**  
-_**Intern, Macroeconomics Research and Strategy**_  
+_**Analyst, Macroeconomics Research and Strategy**_  
 Jan 2016 - Mar 2016  
 [https://www.dymonasia.com/](https://www.dymonasia.com/)  
 - Macroeconomics research across G10 countries, covering commodities, politics, central banks, and Asia bond flows
@@ -77,7 +77,7 @@ Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
 <br />
 
 **CITIBANK**  
-_**Intern, Global Markets**_  
+_**Anayst, Global Markets**_  
 Jan 2015 - Dec 2015  
 [https://www.citigroup.com](https://www.citigroup.com)  
 - Analysed investment earnings and collaterals of major hedge funds across Asia
