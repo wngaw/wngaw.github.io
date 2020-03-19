@@ -10,26 +10,18 @@ permalink: /resume/
 _**Data Scientist, Data Science**_  
 Jul 2018 - Present  
 [https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
-
-Recommendation Engine:
-- Built various propensity recommendation engines for churn customers, using a combination of Alternating Least Square on Spark, Field-Aware Factorization Machines, deep learning, and boosted trees
-- Built product affinity recommendation engines for cross-selling by comparing spatial distance between user and item embeddings
-- Created user and item embeddings for various types of recommendations using Word2Vec representation learning
-- Built automated dynamic email direct marketing (EDM) pipeline for recommendations using Mailjet API
-- Ran weekly experiments to evaluate model and campaign performance, along with its statistical significance
-- Developed front-end web application using Django to generate recommendation engine leads on demand
-
-Search Ranking:
-- Designed and built personalised search ranking algorithm for FairPrice Online using boosted trees, optimized for normalized discounted cumulative gain (NDCG)
-- Taught myself Java and developed a search ranking REST API in Spring Boot that is connected to MySQL and deployed in Kubernetes
-- Implemented cache service for search ranking using Google's Guava Cache that reduced API response time from 50ms to 7ms
-
-Inventory Optimization:
-- Optimized inventory by estimating cross elasticity of demand for item pairs through multi-staged clustering using demographic features, text features, and item embeddings
-
-Data Science Platform:
-- Introduced, built, and maintained open-source analytics tools such as Airflow for job scheduling and MLflow for tracking of model results
-- Built a statistics engine that enabled analysts to easily evaluate statistical significance and minimum sample size of their experiments
+- Core data science team within NTUC Chief Analytics Office that builds analytic solutions for 10 social enterprises
+- **Personalisation - FairPrice Email Recommender & FairPrice Online Search Ranking**
+	- Built recommendation systems to cross-sell products, improved email CTR by 35% and conversion rate by 21%
+	- Built personalised search-ranking service for FairPrice Online using XGBoost, Spring Boot, Guava Cache, Redis
+- **Assortment Optimisation - FairPrice Customer Led Category Management**
+	- Built product category optimiser that incorporates business constraints across 153 physical stores and 95 categories
+	- Built SKU optimiser using multi-staged clustering, DeepWalk embeddings and estimated cross elasticity of demand
+	- Estimated revenue impact using linear and spline regression
+- **Core Data Infrastructure - FairPrice Common Data Mart**
+	- Led a team of two to build a data layer using star schema, reducing disk storage by 23% and aligned business logic
+	- Integrated data science solutions with common data mart, reducing time for deployment from 1 week to a few hours
+- Achieved Top Performer in 2019
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
 
