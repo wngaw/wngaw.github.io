@@ -21,7 +21,7 @@ Jul 2018 - Present
 - **Core Data Infrastructure - FairPrice Common Data Mart**
 	- Led a team of two to build a data layer using star schema, reducing disk storage by 23% and aligned business logic
 	- Integrated data science solutions with common data mart, reducing time for deployment from 1 week to a few hours
-- Achieved Top Performer in 2019
+- Achieved Top Performer in 2019 and 2020
 
 Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS Redshift, AWS Simple Storage Service (S3), AWS DynamoDB, Google Compute Engine, Google Cloud SQL, Google BigQuery, Google Cloud Storage, Google Kubernetes Engine, Oracle Database, LevelDB, Spark, Docker, Elasticsearch, Python, Java, Airflow, MLflow, Django, Springboot, Tableau, BitBucket, Jira, among others.
 
@@ -102,7 +102,7 @@ Chartered Financial Analyst Program
 
 ## HONOURS & AWARDS
 ---
-- NTUC Enterprise - Top Performer (2019)
+- NTUC Enterprise - Top Performer (2019, 2020)
 - Google - Won 1st Place @ Google X Carousell Challenge (2017)
 - Esplanade Theatre - Invitation to present hackathon insights to the upper management (2017)
 - Wealth Management Alliance - Letter of Recommendation (2016)
