@@ -77,7 +77,7 @@ Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
 <br />
 
 **CITIBANK**  
-_**Anayst, Global Markets**_  
+_**Analyst, Global Markets**_  
 Jan 2015 - Dec 2015  
 [https://www.citigroup.com](https://www.citigroup.com)  
 - Analysed investment earnings and collaterals of major hedge funds across Asia
@@ -92,7 +92,7 @@ Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
 Master of Science: Statistics
 
 **NANYANG TECHNOLOGICAL UNIVERSITY**  
-Bachelor of Business (Honours): Banking & Finance
+Bachelor of Business Administration (Honours): Finance
 
 **ESSEC BUSINESS SCHOOL**  
 Overseas Exchange Program
