@@ -211,7 +211,7 @@ for layer in pre_trained_model.layers:
     layer.trainable = False
 ```
 
-#### Pre-trained model summary
+#### Model summary of Inception v3
 
 ```python
 pre_trained_model.summary()
@@ -224,7 +224,7 @@ last_layer = pre_trained_model.get_layer('mixed7')
 last_output = last_layer.output
 ```
 
-#### Dense layers after pre-trained model
+#### Adding dense layers after pre-trained model
 
 ```python
 x = layers.Flatten()(last_output)
@@ -239,7 +239,7 @@ model.compile(optimizer=RMSprop(lr=0.0001),
               metrics=['accuracy'])
 ```
 
-#### Pre-trained with dense layers model summary
+#### Model summary of Inception v3 with dense layers
 
 ```python
 model.summary()
