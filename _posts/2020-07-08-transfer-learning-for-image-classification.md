@@ -173,7 +173,7 @@ plot_result(history)
 
 ![cnn_model_result]({{ '/images/cnn_model_result.png' | relative_url }})
 <br />
-*Fig. 2. CNN Model Result*
+*Fig. 1. CNN Model Result*
 <br />
 
 Using a simple CNN model, we are able to achieve a validation accuracy of 0.7 after 10 epochs. Can we do better using transfer learning?
@@ -184,7 +184,7 @@ Inception is a convolutional neural network architecture introduced by Google wh
 
 ![inception_v3]({{ '/images/inception_v3_architecture.png' | relative_url }})
 <br />
-*Fig. 1. Inception V3 - (Image source: [here](https://software.intel.com/content/www/us/en/develop/articles/inception-v3-deep-convolutional-architecture-for-classifying-acute-myeloidlymphoblastic.html))*
+*Fig. 2. Inception V3 - (Image source: [here](https://software.intel.com/content/www/us/en/develop/articles/inception-v3-deep-convolutional-architecture-for-classifying-acute-myeloidlymphoblastic.html))*
 <br />
 
 #### Download model weights, import model, load weights into model
