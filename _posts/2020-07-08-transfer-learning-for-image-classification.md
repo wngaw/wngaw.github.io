@@ -31,7 +31,7 @@ The following sections will be focusing on implementation using Python.
 
 ### Dataset
 
-Before I go into the comparison, I will like to introduct you to the [Fashion MNist dataset](https://github.com/zalandoresearch/fashion-mnist). This dataset consist of 10 different apparel classes, each of them is a 28x28 grayscale image. Fashion MNist was created for catogorical image classification making it ideal for the task that we are trying accomplish.
+Before I go into the comparison, I will like to introduct you to the [Fashion MNist dataset](https://github.com/zalandoresearch/fashion-mnist). This dataset consist of 10 different apparel classes, each of them is a 28x28 grayscale image. Fashion MNist was created for categorical image classification making it ideal for the task that we are trying accomplish.
 
 Note that you will have to download the images as PNG files for the following examples. Please refer to [this repository](https://github.com/DeepLenin/fashion-mnist_png) for the steps to obtain the dataset.
 
@@ -230,7 +230,7 @@ last_output = last_layer.output
 x = layers.Flatten()(last_output)
 x = layers.Dense(1024, activation='relu')(x)
 x = layers.Dropout(0.2)(x)
-x = layers.Dense  (10, activation='softmax')(x)
+x = layers.Dense(10, activation='softmax')(x)
 
 model = Model(pre_trained_model.input, x)
 
