@@ -7,7 +7,7 @@ tags: supervised-learning
 image: "/images/inception_v3_architecture.png"
 ---
 
-Image classification is one of the areas of deep learning that has developed very rapidly over the last decade. However, due to limited computation resources and training data, most companies will not be able to train a good image classifcation model. Therefore, one of the emerging techniques that overcomes this barrier is the concept of transfer learning.
+Image classification is one of the areas of deep learning that has developed very rapidly over the last decade. However, due to limited computation resources and training data, many companies found it difficult to train a good image classification model. Therefore, one of the emerging techniques that overcomes this barrier is the concept of transfer learning.
 
 {: class="table-of-content"}
 * TOC
@@ -16,24 +16,24 @@ Image classification is one of the areas of deep learning that has developed ver
 
 ## What is Transfer Learning?
 
-Transfer learning involves taking a pre-trained classification model, extracting one of the layers, and then taking that as the input layer to a series of dense layers. The pre-trained model is usually trained by institutions or companies that have much larger computation and financial resources. Some of these popular trained models for image recognition tasks are VGG, Inception, and ResNet.
+Transfer learning involves taking a pre-trained classification model, extracting one of the layers, then taking that as the input layer to a series of dense layers. The pre-trained model is usually trained by institutions or companies that have much larger computation and financial resources. Some of these popular trained models for image recognition tasks are VGG, Inception and ResNet.
 
 Using this newly formed model, we can then set the parameters within the pre-trained model to be non-trainable while only optimizing the parameters of the subsequent dense layers during training.
 
-> ✅ **Due to limited computation resources and training data, most companies will not be able to train a good image classifcation model** <br />
+> ✅ **Due to limited computation resources and training data, many companies found it difficult to train a good image classification model** <br />
 
 In order to illustrate the value of transfer learning, I will be comparing a simple convolutional neural network model against a model that utilises transfer learning in the following examples.
 
 ## Implementation
 
-The following sections will be focusing on implementation of transfer learning using Python.
+The following sections will be focusing on implementation using Python.
 
 
 ### Dataset
 
-Before I go into the comparison, I will like to introduct you to the [Fashion MNist dataset](https://github.com/zalandoresearch/fashion-mnist). This dataset consist of 10 different apparel classes, each of them is a 28x28 grayscale image. Fashion MNist was created for catogrical image classification and it is ideal for the task that we are trying to do.
+Before I go into the comparison, I will like to introduct you to the [Fashion MNist dataset](https://github.com/zalandoresearch/fashion-mnist). This dataset consist of 10 different apparel classes, each of them is a 28x28 grayscale image. Fashion MNist was created for catogorical image classification making it ideal for the task that we are trying accomplish.
 
-Note that you will have to download the images as png files for the following examples. Please refer to [this repository](https://github.com/DeepLenin/fashion-mnist_png) in order to obtain the dataset.
+Note that you will have to download the images as PNG files for the following examples. Please refer to [this repository](https://github.com/DeepLenin/fashion-mnist_png) for the steps to obtain the dataset.
 
 ### Import Libraries
 
@@ -72,10 +72,10 @@ train_generator = train_datagen.flow_from_directory(train_dir,
                                                     target_size=(150, 150))
 
 
-validation_generator =  test_datagen.flow_from_directory(validation_dir,
-                                                         batch_size=100,
-                                                         class_mode='categorical',
-                                                         target_size=(150,150))
+validation_generator = test_datagen.flow_from_directory(validation_dir,
+                                                        batch_size=100,
+                                                        class_mode='categorical',
+                                                        target_size=(150, 150))
 ```
 
 ### Define a Callback to stop training after certain performance is achieved
@@ -84,7 +84,7 @@ validation_generator =  test_datagen.flow_from_directory(validation_dir,
 class myCallback(tf.keras.callbacks.Callback):
     def on_epoch_end(self, epoch, logs={}):
         if(logs.get('acc') > 0.99 and logs.get('val_acc') > 0.99):
-            print("\nReached 99% accuracy and 99% validation accuracy so cancelling training!")
+            print("\nCancelling training as model has reached 99% accuracy and 99% validation accuracy!")
             self.model.stop_training = True
 ```
 
@@ -109,7 +109,7 @@ def plot_result(history):
 
 ### Simple Convolutional Neural Network
 
-For the simple CNN model, I will be have 3 convolutional layers which is followed by a single dense layer, and then the output layer.
+For the simple CNN model, I will be having 3 convolutional layers followed by a single dense layer and the output layer.
 
 #### Defining CNN model
 
@@ -139,10 +139,10 @@ x = layers.Dropout(0.2)(x)
 
 outputs = layers.Dense(10, activation='softmax')(x)
 
-model = Model(inputs=inputs, outputs=outputs) 
+model = Model(inputs=inputs, outputs=outputs)
 
-model.compile(optimizer=RMSprop(lr=0.0001), 
-              loss='categorical_crossentropy', 
+model.compile(optimizer=RMSprop(lr=0.0001),
+              loss='categorical_crossentropy',
               metrics=['accuracy'])
 ```
 
@@ -176,9 +176,9 @@ plot_result(history)
 *Fig. 2. CNN Model Result*
 <br />
 
-Using a simple CNN model, we are able to achieve a validation accuracy of > 0.7 after 10 epochs. Can we do better using transfer learning?
+Using a simple CNN model, we are able to achieve a validation accuracy of 0.7 after 10 epochs. Can we do better using transfer learning?
 
-### Implementing Transfer Learning for Categorical Image Classfication using Inception v3
+### Transfer Learning using Inception v3
 
 Inception is a convolutional neural network architecture introduced by Google which achieved top results in ImageNet Large Scale Visual Recognition Challenge 2014.
 
@@ -197,7 +197,7 @@ Inception is a convolutional neural network architecture introduced by Google wh
 
 # Import Inception v3 Model
 from tensorflow.keras.applications.inception_v3 import InceptionV3
-pre_trained_model = InceptionV3(input_shape=(150,150,3), include_top=False,weights=None)
+pre_trained_model = InceptionV3(input_shape=(150, 150, 3), include_top=False, weights=None)
 
 # Load Inception v3 weights into model
 local_weights_file = '/tmp/inception_v3_weights_tf_dim_ordering_tf_kernels_notop.h5'
@@ -208,8 +208,7 @@ pre_trained_model.load_weights(local_weights_file)
 
 ```python
 for layer in pre_trained_model.layers:
-    # Your Code Here
-    layer.trainable=False
+    layer.trainable = False
 ```
 
 #### Pre-trained model summary
@@ -235,8 +234,8 @@ x = layers.Dense  (10, activation='softmax')(x)
 
 model = Model(pre_trained_model.input, x)
 
-model.compile(optimizer=RMSprop(lr=0.0001), 
-              loss='categorical_crossentropy', 
+model.compile(optimizer=RMSprop(lr=0.0001),
+              loss='categorical_crossentropy',
               metrics=['accuracy'])
 ```
 
@@ -265,16 +264,16 @@ history = model.fit_generator(train_generator,
 plot_result(history)
 ```
 
-![inception_v3_model_result]({{ '/images/cnn_model_result.png' | relative_url }})
+![inception_v3_model_result]({{ '/images/inception_v3_model_result.png' | relative_url }})
 <br />
 *Fig. 3. Inception v3 Model Result*
 <br />
 
-As you can see, using Inception v3 for transfer learning, we are able to obtain a validation accuracy of > 0.82 after 10 epochs.
+As you can see, using Inception v3 for transfer learning, we are able to obtain a validation accuracy of 0.8 after 10 epochs.
 
 ## Remarks
 
-In this simple example, we can see how transfer learning is able outperform a simple CNN model, and that is just for a simple dataset. In real-life, most of our images are often more difficult to classify. Therefore, being able to leverage on a pre-trained model is really a big step forward for the community!
+In this simple example, we can see how transfer learning is able outperform a simple CNN model for the Fashion MNist dataset. In real-life, most of our images are often more difficult to classify. Therefore, being able to leverage on a pre-trained model is really a big step forward for the community!
 
 ## Reference
 
