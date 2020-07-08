@@ -290,6 +290,8 @@ As you can see, using Inception v3 for transfer learning, we are able to obtain 
 
 In this simple example, we can see how transfer learning is able outperform a simple CNN model for the Fashion MNist dataset. In real-life, most of our images are often more difficult to classify. Therefore, being able to leverage on a pre-trained model is really a big step forward for the community!
 
+You can check out [this Jupyter notebook](https://github.com/wngaw/blog/blob/master/transfer_learning_for_image_classification_example/src/Transfer%20Learning%20for%20Image%20Classification.ipynb) for the codes above.
+
 ## Reference
 
 [1] Laurence Moroney et al. [Coursera: Convolutional Neural Networks in TensorFlow](https://www.coursera.org/learn/convolutional-neural-networks-tensorflow)
