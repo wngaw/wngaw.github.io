@@ -8,7 +8,7 @@ Welcome to my tech blog!
 
 ### Short Bio
 
-As a data scientist, I focus on building data science products. For modeling, I often utilise regression (linear, logistic, spline), deep learning (word2vec, wide & deep, etc), ensemble methods (random forest, gradient boosting), factorization machines, and Apache Spark’s MLlib, depending on the use case. For deployment, I utilize a collection of other technologies such as Airflow, Jenkins, Kubernetes, MLflow, Spring Boot, Docker, and Git, among others. I am experienced in using both Amazon Web Services (AWS) and Google Cloud Platform (GCP).
+As a data scientist, I focus on building data science products. For modeling, I often utilise regression (linear, logistic, spline), deep learning (word2vec, DeepWalk, wide & deep, transfer learning), ensemble methods (random forest, gradient boosting, stacking), factorization machines, and Apache Spark’s MLlib, depending on the use case. For deployment, I utilize a collection of other technologies such as Airflow, Jenkins, Kubernetes, MLflow, Spring Boot, Docker, and Git, among others. I am experienced in using both Amazon Web Services (AWS) and Google Cloud Platform (GCP).
 
 As an investor, I manage money by investing across global equities, bonds, commodities, and foreign currencies. I focus on both [strategic asset allocation](https://www.investopedia.com/terms/s/strategicassetallocation.asp) and [tactical asset allocation](https://www.investopedia.com/terms/t/tacticalassetallocation.asp). To date, I have achieved an annualized [time-weighted](https://www.investopedia.com/terms/t/time-weightedror.asp) total return of 7.41% since inception in July 2016. To view my investment performance in more detail, feel free to click on the [investments section](https://wngaw.github.io/investments).
 
@@ -31,6 +31,7 @@ If you need help in building data science products, or struggle to understand in
 - Container Platform: Docker
 - Search Engine: Elasticsearch
 - Job Scheduler: AWS Batch, Airflow, Cron
+- CICD: Bitbucket Pipelines
 - Experimentation: MLflow
 - Visualisation: Tableau, Matplotlib
 - Version Control: Git, Bitbucket
