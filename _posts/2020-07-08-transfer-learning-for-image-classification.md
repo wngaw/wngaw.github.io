@@ -16,7 +16,7 @@ Image classification is one of the areas of deep learning that has developed ver
 
 ## What is Transfer Learning?
 
-Transfer learning involves taking a pre-trained classification model, extracting one of the layers, then taking that as the input layer to a series of dense layers. The pre-trained model is usually trained by institutions or companies that have much larger computation and financial resources. Some of these popular trained models for image recognition tasks are VGG, Inception and ResNet.
+Transfer learning involves taking a pre-trained model, extracting one of the layers, then taking that as the input layer to a series of dense layers. This pre-trained model is usually trained by institutions or companies that have much larger computation and financial resources. Some of these popular trained models for image recognition tasks are VGG, Inception and ResNet.
 
 Using this newly formed model, we can then set the parameters within the pre-trained model to be non-trainable while only optimizing the parameters of the subsequent dense layers during training.
 
@@ -31,11 +31,11 @@ The following sections will be focusing on implementation using Python.
 
 ### Dataset
 
-Before I go into the comparison, I will like to introduct you to the [Fashion MNist dataset](https://github.com/zalandoresearch/fashion-mnist). This dataset consist of 10 different apparel classes, each of them is a 28x28 grayscale image. Fashion MNist was created for categorical image classification making it ideal for the task that we are trying accomplish.
+Before I go into the comparison, I will like to introduct you to the [Fashion MNist dataset](https://github.com/zalandoresearch/fashion-mnist). This dataset consist of 10 different apparel classes, each of them is a 28x28 grayscale image. Fashion MNist was created to test the performance of categorical image classifier, making it ideal for the task that we are trying accomplish.
 
 Note that you will have to download the images as PNG files for the following examples. Please refer to [this repository](https://github.com/DeepLenin/fashion-mnist_png) for the steps to obtain the dataset.
 
-### Import Libraries
+### Import libraries
 
 Let's start off by importing the necessary libraries
 
@@ -80,7 +80,7 @@ validation_generator = valid_datagen.flow_from_directory(validation_dir,
                                                          target_size=(150, 150))
 ```
 
-### Define a Callback to stop training after certain performance is achieved
+### Define a callback to stop training after certain performance is achieved
 
 ```python
 class myCallback(tf.keras.callbacks.Callback):
@@ -284,7 +284,7 @@ plot_result(history)
 *Fig. 5. Inception v3 Model Result*
 <br />
 
-As you can see, using Inception v3 for transfer learning, we are able to obtain a validation accuracy of 0.8 after 10 epochs.
+As you can see, using Inception v3 for transfer learning, we are able to obtain a validation accuracy of 0.8 after 10 epochs. This is a 14% improvement from the previous CNN model.
 
 ## Remarks
 
