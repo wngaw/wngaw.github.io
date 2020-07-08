@@ -46,6 +46,8 @@ from tensorflow.keras.optimizers import RMSprop
 from tensorflow.keras import layers
 from tensorflow.keras import Model
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.utils import plot_model
+from tensorflow.keras import backend as K
 import matplotlib.pyplot as plt
 ```
 
@@ -62,9 +64,9 @@ train_datagen = ImageDataGenerator(rescale=1./255,
                                    zoom_range=0.2,
                                    shear_range=0.2,
                                    horizontal_flip=True,
-                                   fill_mode='nearest')  # with data augmentation
+                                   fill_mode='nearest')  # with data augmentation for train set
 
-test_datagen = ImageDataGenerator(rescale=1./255)  # no augmentation for test set
+valid_datagen = ImageDataGenerator(rescale=1./255)  # no augmentation for validation set
 
 train_generator = train_datagen.flow_from_directory(train_dir,
                                                     batch_size=100,
@@ -72,10 +74,10 @@ train_generator = train_datagen.flow_from_directory(train_dir,
                                                     target_size=(150, 150))
 
 
-validation_generator = test_datagen.flow_from_directory(validation_dir,
-                                                        batch_size=100,
-                                                        class_mode='categorical',
-                                                        target_size=(150, 150))
+validation_generator = valid_datagen.flow_from_directory(validation_dir,
+                                                         batch_size=100,
+                                                         class_mode='categorical',
+                                                         target_size=(150, 150))
 ```
 
 ### Define a Callback to stop training after certain performance is achieved
@@ -150,13 +152,19 @@ model.compile(optimizer=RMSprop(lr=0.0001),
 
 ```python
 model.summary()
+plot_model(model, to_file='cnn_model.png', show_shapes=True, show_layer_names=True)
 ```
+
+![cnn_model_architecture]({{ '/images/cnn_model_architecture.png' | relative_url }})
+<br />
+*Fig. 1. CNN Model Architecture*
+<br />
 
 #### Fitting the model
 
 ```python
 callbacks = myCallback()
-history = model.fit_generator(train_generator,
+history = model.fit_generator(generator=train_generator,
                               validation_data=validation_generator,
                               steps_per_epoch=100,
                               epochs=10,
@@ -173,7 +181,7 @@ plot_result(history)
 
 ![cnn_model_result]({{ '/images/cnn_model_result.png' | relative_url }})
 <br />
-*Fig. 1. CNN Model Result*
+*Fig. 2. CNN Model Result*
 <br />
 
 Using a simple CNN model, we are able to achieve a validation accuracy of 0.7 after 10 epochs. Can we do better using transfer learning?
@@ -184,7 +192,7 @@ Inception is a convolutional neural network architecture introduced by Google wh
 
 ![inception_v3]({{ '/images/inception_v3_architecture.png' | relative_url }})
 <br />
-*Fig. 2. Inception V3 - (Image source: [here](https://software.intel.com/content/www/us/en/develop/articles/inception-v3-deep-convolutional-architecture-for-classifying-acute-myeloidlymphoblastic.html))*
+*Fig. 3. Inception V3 - (Image source: [here](https://software.intel.com/content/www/us/en/develop/articles/inception-v3-deep-convolutional-architecture-for-classifying-acute-myeloidlymphoblastic.html))*
 <br />
 
 #### Download model weights, import model, load weights into model
@@ -215,6 +223,7 @@ for layer in pre_trained_model.layers:
 
 ```python
 pre_trained_model.summary()
+plot_model(pre_trained_model, to_file='inception_v3_model.png', show_shapes=False, show_layer_names=True)
 ```
 
 #### Obtain last layer output of the pre-trained model
@@ -243,13 +252,19 @@ model.compile(optimizer=RMSprop(lr=0.0001),
 
 ```python
 model.summary()
+plot_model(model, to_file='inception_v3_with_dense_layers_model.png', show_shapes=False, show_layer_names=True)
 ```
+
+![inception_v3_with_dense_layers_model_architecture]({{ '/images/inception_v3_with_dense_layers_model_architecture.png' | relative_url }})
+<br />
+*Fig. 4. Inception v3 with Dense Layers Model Architecture*
+<br />
 
 #### Fitting the model
 
 ```python
 callbacks = myCallback()
-history = model.fit_generator(train_generator,
+history = model.fit_generator(generator=train_generator,
                               validation_data=validation_generator,
                               steps_per_epoch=100,
                               epochs=10,
@@ -266,7 +281,7 @@ plot_result(history)
 
 ![inception_v3_model_result]({{ '/images/inception_v3_model_result.png' | relative_url }})
 <br />
-*Fig. 3. Inception v3 Model Result*
+*Fig. 5. Inception v3 Model Result*
 <br />
 
 As you can see, using Inception v3 for transfer learning, we are able to obtain a validation accuracy of 0.8 after 10 epochs.
