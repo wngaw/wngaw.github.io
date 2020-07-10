@@ -6,7 +6,7 @@ permalink: /investments/
 
 I provide customized investments and personal finance advisory services in exchange for a small fee. Feel free to contact me if interested.
 
-Here is my [time-weighted](https://www.investopedia.com/terms/t/time-weightedror.asp) investment returns in more detail:
+Here is my portfolio's [time-weighted](https://www.investopedia.com/terms/t/time-weightedror.asp) investment returns compared against Singapore's [Straits Times Index](https://www.sgx.com/indices/products/sti):
 
 ### Cumulative Return
 
