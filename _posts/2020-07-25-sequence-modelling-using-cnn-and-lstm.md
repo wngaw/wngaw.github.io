@@ -7,16 +7,15 @@ tags: supervised-learning
 image: "/images/inception_v3_architecture.png"
 ---
 
-Sequence data is everywhere. Some of the most obvious ones are time series and natural language data. Currently, almost all companies will have some sort of time series data. Increasingly, more companies are also gathering unstructured natural language data such as product reviews. At the same time, neural network is now one of the most popular algorithm to learn the behaviour of such seuqnce data. In this post we will explore more on how we can utilie CNN and LSTM for sequence modelling!
+Sequence data is everywhere. Some of the most obvious ones are time series and natural language data. Currently, almost all companies will have some sort of time series data. Increasingly, more companies are also gathering unstructured natural language data such as product reviews. At the same time, neural network is now one of the most popular algorithm to learn the behaviour of such sequence data. In this post I will explore more on how we can utilise CNN and LSTM for sequence modelling!
 
 {: class="table-of-content"}
 * TOC
 {:toc}
 
-
 ## What is Sequence Modelling?
 
-Sequence modelling is a technique where a neural network takes in a variable number of sequence data and output a variable number of predictions. The input is typically fed into a recurrent neural network (RNN). There are four main variants of sequence models, depending of the number of input and output data points. In the case where the input and output are both one data point, we call it a one-to-one sequence model, which is exactly the same as a normal feed-forward neural network. When input is a single data point and output is a variable number of data points, we call it one-to-many sequence model. When input is variable while output is one data point, we call it many-to-one sequence model. And finally, when both input and output are variable number of data points we call it many-to-many sequence model. In this post we will focus on many-to-one and many-to-many sequence models.
+Sequence modelling is a technique where a neural network takes in a variable number of sequence data and output a variable number of predictions. The input is typically fed into a recurrent neural network (RNN). There are four main variants of sequence models, depending of the number of input and output data points. In the case where the input and output are both one data point, we call it a one-to-one sequence model, which is exactly the same as a normal feed-forward neural network. When input is a single data point and output is a variable number of data points, we call it one-to-many sequence model. When input is variable while output is one data point, we call it many-to-one sequence model. Lastly, when both input and output are variable number of data points we call it many-to-many sequence model. In this post we will focus on many-to-one and many-to-many sequence models.
 
 > ✅ **In this post we will focus on many-to-one and many-to-many sequence models** <br />
 
@@ -24,16 +23,15 @@ Sequence modelling is a technique where a neural network takes in a variable num
 
 Convolutional neural network (CNN) is a type of neural network architecture that is typically used for image recognition as the 2-D convolutional filters are able to detect edges of images and use that to generalise images. However, in the case of sequence data, we can use a 1-D convolutional filters in order to extract high-level features.
 
-Long-short Term Memory (LSTM) is a kind of recurrent neural network that uses a special kind of cells that is able to memorize information by having gateways that passes through different cells. This is critical for long sequence data as a simple Recurrent Neural Network without any special cells like LSTM or GRU suffers from the vanishing gradient problem.
+Long-short Term Memory (LSTM) is a kind of recurrent neural network that uses a special kind of cell that is able to memorise information by having gateways that pass through different cells. This is critical for long sequence data as a simple Recurrent Neural Network without any special cells like LSTM or GRU suffers from the vanishing gradient problem.
 
 ## Implementation
 
 The following sections will be focusing on implementation using Python.
 
-
 ### Dataset
 
-The data set in the following example will be based on Sunspots dataset which is available at [Kaggle](https://www.kaggle.com/robervalt/sunspots). Sunspots are temporary phenomena on the Sun's photosphere that appear as spots darker than the surrounding areas. They are regions of reduced surface temperature caused by concentrations of magnetic field flux that inhibit convection. Sunspots usually appear in pairs of opposite magnetic polarity. Their number varies according to the approximately 11-year solar cycle.
+The data set in the following example will be based on Sunspots dataset which is available at Kaggle by clicking [here](https://www.kaggle.com/robervalt/sunspots). Sunspots are temporary phenomena on the Sun's photosphere that appear as spots darker than the surrounding areas. They are regions of reduced surface temperature caused by concentrations of magnetic field flux that inhibit convection. Sunspots usually appear in pairs of opposite magnetic polarity. Their number varies according to the approximately 11-year solar cycle.
 
 ### Import libraries
 
@@ -86,8 +84,7 @@ df = pd.read_csv('data/Sunspots.csv', usecols=['Date', 'Monthly Mean Total Sunsp
 ### Pre-processing
 
 ```python
-time_step = list(df.index)
-# time = np.array(time_step)
+time = np.array(list(df.index))
 sunspots = list(df['Monthly Mean Total Sunspot Number'])
 series = np.array(sunspots)
 
@@ -191,7 +188,7 @@ plot_loss(history)
 
 #### Test
 
-We will now use the train model to predict values for the test set and evaluate.
+We will now use the trained model to predict values for the test set and evaluate it.
 
 ```python
 forecast = model_forecast(model_many_to_one,
@@ -220,7 +217,9 @@ plot_series(time_test, forecast)
 
 ### Many-to-many sequence model
 
-Similar to many-to-one, we need a convert the sequence data into multiple samples of predictor variables and target variable.
+#### Pre-procesing
+
+Similar to many-to-one, we need to convert the sequence data into multiple samples of predictor variables and target variable.
 
 ```python
 def windowed_dataset(series, window_size, batch_size, shuffle_buffer, forecast_period):
@@ -297,7 +296,7 @@ plot_loss(history)
 
 #### Test
 
-We will now use the train model to predict values for the test set and evaluate. Here we are splitting the test set in multiple chunks of 60 values, taking the first 30 values of each chunk as the predictors and the next 30 values as the targets.
+We will now use the trained model to predict values for the test set and evaluate it. Here we are splitting the test set in multiple chunks of 60 values, taking the first 30 values of each chunk as the predictors and the next 30 values as the targets.
 
 ```python
 # Using the past 30 values as inputs and predicting the next 30 values,
@@ -357,9 +356,9 @@ plot_series(time_test_subset, forecast_subset)
 
 ## Remarks
 
-In this post, we have seen how we can use CNN and LSTM to build many-to-one and many-to-many sequence models. In real world applications, many-to-one can by used in place of typical classification or regression algorithms. Many-to-many can be used when there is a need to predict a sequence of data such as the stock price for the next 6 months.
+In this post, we have seen how we can use CNN and LSTM to build many-to-one and many-to-many sequence models. In real world applications, many-to-one can by used in place of typical classification or regression algorithms. On the other hand, many-to-many can be used when there is a need to predict a sequence of data such as the stock price for the next 6 months.
 
-You can check out the Jupyter Notebook [here]().
+You can check out the Jupyter Notebook [here](https://github.com/wngaw/blog/blob/master/sequence_modelling_using_cnn_and_lstm/src/Sequence%20Modelling%20using%20CNN%20and%20LSTM.ipynb).
 
 ## Reference
 
