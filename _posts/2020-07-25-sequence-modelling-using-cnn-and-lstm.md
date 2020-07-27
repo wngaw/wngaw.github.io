@@ -7,7 +7,7 @@ tags: supervised-learning
 image: "/images/rnn.png"
 ---
 
-Sequence data is everywhere; some of the most obvious ones are time series and natural language data. Increasingly, companies are also gathering more sequence data such as timestamped transactions and online product reviews. While all this is happening, neural network has gained wide-spread adoption especially in the field of NLP which focuses primarily on sequence data. Therefore, in this post I will explore more on how we can utilise CNN and LSTM for sequence modelling!
+Sequence data is everywhere. One example is timestamped transactions, something that almost every company has. Increasingly companies are also collecting unstructured natural language data such as product reviews. While techniques like RNN are widely used for NLP problems, we can actually use it for any form of sequence-like predictions.Therefore, in this post I will explore more on how we can utilise CNN and LSTM for sequence modelling!
 
 {: class="table-of-content"}
 * TOC
