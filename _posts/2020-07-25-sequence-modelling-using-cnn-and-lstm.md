@@ -4,10 +4,10 @@ comments: true
 date: 2020-07-25 12:00:00
 title: Sequence Modelling using CNN and LSTM
 tags: supervised-learning
-image: "/images/inception_v3_architecture.png"
+image: "/images/rnn.png"
 ---
 
-Sequence data is everywhere. Some of the most obvious ones are time series and natural language data. Currently, almost all companies will have some sort of time series data. Increasingly, more companies are also gathering unstructured natural language data such as product reviews. At the same time, neural network is now one of the most popular algorithm to learn the behaviour of such sequence data. In this post I will explore more on how we can utilise CNN and LSTM for sequence modelling!
+Sequence data is everywhere; some of the most obvious ones are time series and natural language data. Increasingly, companies are also gathering more sequence data such as timestamped transactions and online product reviews. While all this is happening, neural network has gained wide-spread adoption especially in the field of NLP which focuses primarily on sequence data. Therefore, in this post I will explore more on how we can utilise CNN and LSTM for sequence modelling!
 
 {: class="table-of-content"}
 * TOC
@@ -15,11 +15,19 @@ Sequence data is everywhere. Some of the most obvious ones are time series and n
 
 ## What is Sequence Modelling?
 
-Sequence modelling is a technique where a neural network takes in a variable number of sequence data and output a variable number of predictions. The input is typically fed into a recurrent neural network (RNN). There are four main variants of sequence models, depending of the number of input and output data points. In the case where the input and output are both one data point, we call it a one-to-one sequence model, which is exactly the same as a normal feed-forward neural network. When input is a single data point and output is a variable number of data points, we call it one-to-many sequence model. When input is variable while output is one data point, we call it many-to-one sequence model. Lastly, when both input and output are variable number of data points we call it many-to-many sequence model. In this post we will focus on many-to-one and many-to-many sequence models.
+Sequence modelling is a technique where a neural network takes in a variable number of sequence data and output a variable number of predictions. The input is typically fed into a recurrent neural network (RNN).
 
-> ✅ **In this post we will focus on many-to-one and many-to-many sequence models** <br />
+There are four main variants of sequence models
+- one-to-one: one input, one output
+- one-to-many: one input, variable outputs
+- many-to-one: variable inputs, one output
+- many-to-many: variable inputs, variable outputs
 
-## What is CNN And LSTM?
+As most real-life applications revolves around variable inputs, I will be focusing on many-to-one and many-to-many sequence models
+
+> ⭐ **As most real-life applications revolves around variable number of inputs, I will be focusing on many-to-one and many-to-many sequence models** <br />
+
+## Quick recap on CNN And LSTM
 
 Convolutional neural network (CNN) is a type of neural network architecture that is typically used for image recognition as the 2-D convolutional filters are able to detect edges of images and use that to generalise images. However, in the case of sequence data, we can use a 1-D convolutional filters in order to extract high-level features.
 
