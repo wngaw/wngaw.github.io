@@ -23,15 +23,15 @@ There are four main variants of sequence models:
 - many-to-one: variable inputs, one output
 - many-to-many: variable inputs, variable outputs
 
-As most real-life applications revolve around variable inputs, I will be focusing on many-to-one and many-to-many sequence models
+As most data science applications are able to use variable inputs, I will be focusing on many-to-one and many-to-many sequence models
 
-> ⭐ **As most real-life applications revolves around variable number of inputs, I will be focusing on many-to-one and many-to-many sequence models** <br />
+> ⭐ **As most data science applications are able to use variable number of inputs, I will be focusing on many-to-one and many-to-many sequence models** <br />
 
 ## Quick recap on CNN and LSTM
 
-Convolutional neural network (CNN) is a type of neural network architecture that is typically used for image recognition as the 2-D convolutional filters are able to detect edges of images and use that to generalise images. However, in the case of sequence data, we can use a 1-D convolutional filters in order to extract high-level features.
+Convolutional Neural Network (CNN) is a type of neural network architecture that is typically used for image recognition as the 2-D convolutional filters are able to detect edges of images and use that to generalise image patterns. In the case of sequence data, we can use a 1-D convolutional filters in order to extract high-level features.
 
-Long-short Term Memory (LSTM) is a kind of recurrent neural network that uses a special kind of cell that is able to memorise information by having gateways that pass through different cells. This is critical for long sequence data as a simple Recurrent Neural Network without any special cells like LSTM or GRU suffers from the vanishing gradient problem.
+Long-short Term Memory (LSTM) is a kind of recurrent neural network (RNN) that uses a special kind of cell that is able to memorise information by having gateways that pass through different cells. This is critical for long sequence data as a simple RNN without any special cells like LSTM or GRU suffers from the vanishing gradient problem.
 
 ## Implementation
 
@@ -43,7 +43,7 @@ The data set in the following example will be based on Sunspots dataset which is
 
 ### Import libraries
 
-Let's start off by importing the necessary libraries
+Let's start off by importing the necessary libraries.
 
 ```python
 import pandas as pd
