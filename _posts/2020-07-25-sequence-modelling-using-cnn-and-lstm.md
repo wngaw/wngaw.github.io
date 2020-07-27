@@ -17,17 +17,17 @@ Sequence data is everywhere; some of the most obvious ones are time series and n
 
 Sequence modelling is a technique where a neural network takes in a variable number of sequence data and output a variable number of predictions. The input is typically fed into a recurrent neural network (RNN).
 
-There are four main variants of sequence models
+There are four main variants of sequence models:
 - one-to-one: one input, one output
 - one-to-many: one input, variable outputs
 - many-to-one: variable inputs, one output
 - many-to-many: variable inputs, variable outputs
 
-As most real-life applications revolves around variable inputs, I will be focusing on many-to-one and many-to-many sequence models
+As most real-life applications revolve around variable inputs, I will be focusing on many-to-one and many-to-many sequence models
 
 > ⭐ **As most real-life applications revolves around variable number of inputs, I will be focusing on many-to-one and many-to-many sequence models** <br />
 
-## Quick recap on CNN And LSTM
+## Quick recap on CNN and LSTM
 
 Convolutional neural network (CNN) is a type of neural network architecture that is typically used for image recognition as the 2-D convolutional filters are able to detect edges of images and use that to generalise images. However, in the case of sequence data, we can use a 1-D convolutional filters in order to extract high-level features.
 
