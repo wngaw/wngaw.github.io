@@ -343,7 +343,7 @@ for i in range(num_batch):
         forecast_subset = np.append(forecast_chunk, forecast_subset)  
 ```
 
-MAE for test set is 37.17, significantly higher than the many-to-one model. This indicates that many-to-many is a more difficult learning task compared to many-to-one. Further fine-tuning of model might be required.
+MAE for test set is 37.17, significantly higher than the many-to-one model. This indicates that many-to-many is a more difficult learning task compared to many-to-one. Further fine-tuning of model might be required. Firstly, we can try removing the trend and seasonality of the time series before fitting the model. Secondly, we can try increasing the window size to allow more inputs into the many-to-many sequence model. I will leave that for you to try it out!
 
 ```python
 mae = tf.keras.metrics.mean_absolute_error(test_subset, forecast_subset).numpy()
