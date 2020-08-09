@@ -438,7 +438,7 @@ for item in items:
 list_things = ["something with " + item for item in items if condition_based_on(item)]
 ```
 
-As you can see, syntactic sugar helps to compress complicated logics into a single line at the cost of readability. If you find your syntactic sugar having more than two or three variables, just ask an intermediate python developer if your code is still readable. Otherwise, consider removing the syntactic sugar.
+As you can see, syntactic sugar helps to compress complicated logics into a single line at the cost of readability. If you find your syntactic sugar having more than two or three variables, just ask an intermediate python developer if your code is still readable. If the answer is no, then consider removing the syntactic sugar.
 
 However, if syntactic sugar helps to improve your code's time and/or space complexity, and you are facing resource constraints, then that itself is a valid reason to use syntactic sugar even if it compromises readability.
 
