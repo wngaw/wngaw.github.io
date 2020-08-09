@@ -7,13 +7,13 @@ tags: scripting-language
 image: "/images/python.png"
 ---
 
-If it runs, its fine... right? Not really, because as programmers we should strive to write good quality code in order to make our life easier. In this post, I will first showcase some standard practices then move on to some controversial points which some might disagree.
+If it runs, its fine... right? Not really, because as programmers we should strive to write good quality code in order to make our life easier. In this post, I will first showcase some standard practices, then move on to some debatable points which some might disagree.
 
 {: class="table-of-content"}
 * TOC
 {:toc}
 
-## Standard Practice
+## Standard Practices
 
 ### Write docstring and comments
 
@@ -52,7 +52,7 @@ def power(base, exponent):
 
 ### Include your data type in your variable name
 
-This is a very simple but often overlooked aspect. Simply give a prefix to your variable to tell you what data type it is. If you have a few hundred lines of cone, you might forget what data type a certain variable is and end up scrolling up and down to check the data type.
+This is a very simple but often overlooked aspect. Simply give a prefix to your variable to tell you what data type it is. If you have a few hundred lines of code, you might forget what data type a certain variable is and end up scrolling up and down to check the data type.
 
 Positive example:
 
@@ -74,7 +74,7 @@ data_transformed = transform(data)
 
 ### Be mindful of namespace pollution
 
-Always try to minimize the number of names to be added to your program's namespace. When you import a package, be explicit about the submodule that you are importing, don't just import everything. Be very careful about creating any global variables as the namespace might collide with another variable in your program and cause a bug.
+Always try to minimize the number of names to be added to your program's namespace. When you import a package, be explicit about the submodules that you are importing, don't just import everything. Be very careful about creating any global variables as the namespace might collide with another variable in your program and cause a bug.
 
 Positive example:
 
@@ -88,7 +88,7 @@ Negative example:
 from sklearn import *
 ```
 
-### Have a configuration file to store variables that you will be changing frequently
+### Have a configuration file
 
 If you have many constants that are reused in several places, and that you will change them frequently during development or when switching from development to production, then you might want to store all these constants in a configuration file so that you do not have to look through all your source code and change them one by one.
 
@@ -127,7 +127,7 @@ clf = RandomForestClassifier(max_depth=3)
 clf.fit(X, y)
 ````
 
-### Use auto code formatter to reformat your code to PEP 8 standard
+### Use auto code formatter
 
 Focus your time and mental engergy on more important things rather the manual code formatting. Just write your Python code in whatever format that runs, then simply use an auto code formatter to automatically change all your code to conform to PEP 8.
 
@@ -146,7 +146,7 @@ black $folder_name
 black $file_name
 ```
 
-### Print out your process ID, time taken, and memory usage
+### Print out standard process metrics
 
 During development and production, there are few standard information that you will need to know such as how long the job is expected to run, how much resources it is taking, and the Python process id of the job (in case you want to kill it). Therefore, it is a good practice to just include a few standard commands in your main script to output this information.
 
@@ -199,7 +199,7 @@ if __name__ == "__main__":
 
 Note: There are other kinds of memory profiler which can be used. For example, you can use [memory-profiler](https://pypi.org/project/memory-profiler/) to sample memory usage at a fixed interval if you know in advance roughly how much time your process will take.
 
-### Go beyond procedural programming and learn how to use functional and object-oriented programming
+### Know when to use procedural, functional, and object-oriented programming
 
 Procedural programming usually contains a sequence of commands to be carried out. This is by far the most widely known paradigm. In fact, many programmers are familiar only with this one. It is also a natural extension of how humans work: we do things sequentially one after another in our day-to-day routine.
 
@@ -254,7 +254,7 @@ sum_result = (constant_1 + constant_2) + 3
 multiply_result = (constant_1 + constant_2) * 4
 ````
 
-Note: The above example is over simplistic. In reality, when you have numerous steps and complicated logics in your object, isolating these logics will make your code alot more readable.
+Note: The above example is over simplistic. In reality, when you have numerous steps and complicated logics in your object, isolating these logics in a separate class or functions will make your code alot more readable.
 
 ### Use multi-processing if you are facing CPU bound processes
 
@@ -382,7 +382,7 @@ if __name__ == "__main__":
 
 Note: The change from multi-processing to multi-threading is just a switch from `multi-processing.Pool` to `multi-processing.dummy.Pool`.
 
-### Understand the meaning of underscore in Python
+### Understand the meaning of underscore
 
 In Python, underscore carries several special meanings. However, I will just cover two of the most widely used ones.
 
@@ -402,13 +402,13 @@ for _ in range(10):
     do_something()
 ```
 
-## Controversial
+## Debatable Practices
 
-### Reserve Jupyter Notebook only for tasks that require high level of debugging
+### Reserve Jupyter Notebook only for tasks that require lots of debugging
 
 Jupyter Notebook is an interactive web tool for people to write their codes. Often this is one of the first few tools that most people started to use when learning Python. This is because the interactive nature of it allows developers to understand every single line of code in granular detail while providing immediate feedback for new lines of code.
 
-However, there is a tradeoff for this level of granular detail and immediate feedback - the code written is not of production quality. To be of prodution quality, code needs to be extremely readable and abstraction should be applied whenever possible in order to make debugging easier. This is because when a project is in production and something fails, often the orignal developer might not even be the one trying to debug the code; it might be done by an engineer in the production team. Therefore, you cannot dump a few hundred lines of code in one single file Jupyter Notebook and expect others to figure out what is happening.
+However, there is a tradeoff for this level of granular detail and immediate feedback - the code written is not of production quality. To be of prodution quality, the code needs to be extremely readable and abstraction should be applied whenever possible in order to make debugging easier. This is because when a project is in production and something fails, often the orignal developer might not even be the one trying to debug the code; it might be done by an engineer in the production team. Therefore, you cannot dump a few hundred lines of code in one single Jupyter Notebook and expect others to figure out what is happening.
 
 Once a Python developer has reach an intermediate level of proficiency, he/she should reserve Jupyter Notebook for only tasks that require high level of debugging such as plotting of charts, testing of regular expression, or creating of new algorithms that are not found in the open-source world.
 
@@ -438,9 +438,9 @@ for item in items:
 list_things = ["something with " + item for item in items if condition_based_on(item)]
 ```
 
-As you can see, syntactic sugar helps to compress complicated logics into a single line at the cost of readability. If you find your syntactic sugar having more than two or three variables, just ask an intermediate python developer if your code is still readible. Otherwise, consider removing the syntactic sugar.
+As you can see, syntactic sugar helps to compress complicated logics into a single line at the cost of readability. If you find your syntactic sugar having more than two or three variables, just ask an intermediate python developer if your code is still readable. Otherwise, consider removing the syntactic sugar.
 
-However, if syntactic sugar helps to improve your code's time or space complexity, and you are facing resource constraints, then that itself is a valid reason to use syntactic sugar even if it compromises readibility.
+However, if syntactic sugar helps to improve your code's time and/or space complexity, and you are facing resource constraints, then that itself is a valid reason to use syntactic sugar even if it compromises readability.
 
 ## Comments
 
