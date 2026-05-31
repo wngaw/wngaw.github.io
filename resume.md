@@ -101,8 +101,10 @@ Technologies: VBA, Microsoft Excel, and Bloomberg Terminal.
 **Singapore Armed Forces**  
 _**Infantry Commander**_  
 May 2011 - Mar 2013  
-[https://www.citigroup.com](https://www.citigroup.com)  
+[https://www.mindef.gov.sg/](https://www.mindef.gov.sg/)  
 - Mandatory full-time national service.
+
+<br />
 
 ## EDUCATION
 ---
