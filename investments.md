@@ -6,7 +6,7 @@ permalink: /investments/
 
 I provide paid personal finance and investments advisory services. Feel free to contact me if you are interested.
 
-My area expertise:
+My area of expertise:
 - Crypto assets and blockchain
 - Macroeconomics (Economics, FX, Bonds, Commodities)
 - Politics & history
