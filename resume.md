@@ -8,8 +8,7 @@ permalink: /resume/
 ---
 **Stealth Startup**  
 _**Technical & Team Lead, Big Data**_  
-Jul 2018 - Present  
-[https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
+Dec 2023 - Present  
 - Real-time pricing engine (10,000+ tokens)
 - Real-time sub-second blockchain transaction processing (100+ blockchains)
 - Real-time outlier detection
@@ -26,8 +25,8 @@ Technologies: Kubernetes, Redis, AWS Elastic Compute Cloud (EC2), AWS Elastic Ma
 
 **BINANCE**  
 _**Technical & Team Lead, Sr Data Scientist, Data Science & Algorithm**_  
-Jul 2018 - Present  
-[https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
+Sep 2020 - Nov 2023  
+[https://www.binance.com](https://www.binance.com/)  
 - Marketing Data Science: customer lifetime value prediction, churn user segmentation, causal inference analysis, marketing mix modelling and competitor analysis.
 - Operations Data Science: graph-based anomaly detection, user & crypto token embeddings, text intent classification, online-search re-ranking, credit-scoring, interest rate optimisation and wallet fund optimisation.
 - Blockchain Data Science: compliance KYT, security monitoring, risk management, business strategy and research.
@@ -41,7 +40,7 @@ Technologies: AWS Elastic Compute Cloud (EC2), AWS Elastic MapReduce (EMR), AWS 
 
 **NTUC ENTERPRISE**  
 _**Data Scientist, Data Science**_  
-Jul 2018 - Present  
+Jul 2018 - Sep 2020  
 [https://www.ntuc.org.sg](https://www.ntuc.org.sg)  
 - Data science team within NTUC Chief Analytics Office. Built machine learning models such as recommender systems, online search ranking, user & item graph embeddings, customer & store segmentation, assortment & promotion optimisation for Singapore's largest grocery chain.
 
